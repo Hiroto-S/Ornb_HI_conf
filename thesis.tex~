@@ -1,0 +1,300 @@
+% Intended LaTeX compiler: pdflatex
+
+  \documentclass{jsarticle}
+  \usepackage[dvipdfmx]{graphicx}
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{authblk}
+\author[1]{河野大登(Kono Hiroto)}
+\author[1]{福森聡(Satoshi Fukumori)}
+\author[1]{西谷滋人(Shigeto R. Nishitani)}
+\affil[1]{関西学院大学理工学部情報科学科(三田市)．Department of Informatics, Kwansei Gakuin University(Sanda-shi, Hyogo).}
+\author{\texttt{S}}
+\date{}
+\title{知識構築システムornbを利用した学習過程の考察}
+\hypersetup{
+ pdfauthor={\texttt{S}},
+ pdftitle={知識構築システムornbを利用した学習過程の考察},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={Jp}}
+\begin{document}
+
+\maketitle
+
+
+\section{abstract}
+\label{sec:org585118a}
+At graduate research, 
+although the process is more important than the results,
+most students don't notice it.
+Because the guild system is nice to learn the process,
+the graduate reseach possesses a kind of
+relationship between 
+a mentor and a padawan learner.
+
+On this project, 
+we are developing a system for
+noticing importance of learning process,
+ornb, whose specifications and the 
+connections to a static web system, jekyll,
+
+卒業研究では結果だけではなく，
+結果に至る過程を学ぶことが重要であるが，
+多くの学生は気づいていない．
+過程を学習する方法の一つとしての徒弟制は優れており，
+それ故に卒業研究は徒弟制的側面を有している．
+しかしながら，学生は徒弟制に気づかないため、
+しばしば教授や先輩から過程を学べない．
+本研究では過程を学ぶことの重要性を学生に気づかせる仕組みの提案を目指し，
+静的web作成システムjekyllを活用した
+知識構築システムornbの仕様について考察する．
+
+1991年にレイヴとウェンガーは「状況に埋め込まれた学習」を，学習を特定のタイプの社会的共同参加という状況の中に置いた．学習にどのような認知過程と概念構造が含まれるかを問う代わりに，どのような社会的関わりが学習が生起する適切な文脈を提供するかを問う．学習者は，正統的周辺参加という緩やかな条件のもとで，実際に仕事の過程に従事することによって業務を遂行する技能を獲得して行く．p7
+
+\begin{itemize}
+\item 学習者が熟練者の実践活動に参加はするものの，それはごく限られたレベルであり，しかも最終的な産物に対しては，ごく限られた責任しか追わないという独自の関与のあり方である.
+\end{itemize}
+
+1989年にグロンスハンスは，西ヨーロッパと米国において徒弟制は最も価値のある，しかも最も力のない労働者を統制するための伝統的な形態だと長い間満たされていた．しかしながら，今日の西アフリカでは，貧困，膨大な人口，手工業の熟練者の組織性から，比較的穏やか，比較的平等主義的な非搾取的な特徴が徒弟制にみられる．p41
+\begin{itemize}
+\item 私たちは，実践共同体に焦点を当てることになり，進行中の実践において学習のアイデンティティが十全的参加に向けて関わり合い，発展するためには，学習が正統的周辺参加者でなければならないことを協調することになった．p41
+\end{itemize}
+新参者を親方，ボス，あるいは管理者と深く対立捨関係に陥らせるとか，仕事に過度に時組んで疲労困憊させてしまうとか，参加させるよりも非自発的に隷従させるとか，こういう条件は実践における学習の可能性を部分的に，もしくは完全に，歪めてしまう．p42
+\subsection{ユカタンの産婆}
+\label{sec:org6a099e5}
+\begin{itemize}
+\item 徒弟制は日常生活の一形態として，日常生活の流れの中で生じる．
+\item そこに教える努力と言えるものは全く見られないかもしれない．
+\begin{itemize}
+\item 将来産婆になるマヤ族の少女は大概その
+\end{itemize}
+\end{itemize}
+母親か祖母が産婆である．
+\begin{itemize}
+\item 産婆術は家族の系譜に沿って伝承されるため．
+\end{itemize}
+\subsection{ヴァイ族とゴラ族の仕立屋}
+\label{sec:org16115b5}
+\begin{itemize}
+\item 儀式に従って徒弟制に入る
+\item 産婆に比べて，公式的なもの
+\end{itemize}
+
+
+\section{はじめに}
+\label{sec:org028181c}
+今日の大学教育は，フンボルト理念を基礎としている．
+フンボルト理念は1810年にヴィルヘルム・フォン・フンボルトが，ベルリン大学を創設した．
+ベルリン大学は，近代大学の出発点と呼ばれており，このフンボルト理念から始まった．
+フンボルト理念の中核は研究中心主義である．
+フンボルトは,「知識はまだ明らかにされていないもの」と扱い，
+学ぶ学生以上に，研究する学生像を浮かび上らせ，
+ゼミナールや実験室，研究室の存在の大きさを？唱えた．
+つまり，大学は教育の場である以上に研究の場であり，
+これらの考え方がドイツのみならず，世界の大学を変えた．
+
+それが，授業への出席，
+レポートや期末試験を経て単位を取得する仕組みに繋がっている．
+
+しかし，学生は，意欲的に授業に参加し，
+自らが参加者となり授業に出席することで，
+知識を得ようとする姿勢が見受けられない．
+「単位さえあればいい」あるいは「卒業して就職さえできればいい」という
+本音と，「眠い」という実感によって，
+大学で授かるべき知識について魅力を感じなくなっている．
+あるいは社会に出て，すぐに実用できるスキル
+実用できるスキルの習得，例えば，英会話や論文作成術を
+身につけようとする．
+
+したがって，授業の内容の重要性に気づくことなく，
+レポートや期末試験の前にレジュメを確認しその内容を提出する．
+つまり，内容や過程を重要視せず，結果のみを重要としている．
+
+つまり，現在学生の知識習得に役立つと思って課されている
+レポートや試験は，
+結果のみを求めているという誤ったメッセージとして，
+学生が受け取っている可能性がある．
+
+\section{大学生は徒弟制を否定しがち}
+\label{sec:orgb6c74e9}
+大学に通う学生は，大学は研究の場であるという認識が薄く，
+卒業研究や，研究室における徒弟制に気づいていない．
+
+\begin{quote}
+1989年にグロスハンスの指摘によれば，
+西ヨーロッパとほかでもない米国において
+
+中略
+
+徒弟制は最も価値のある，
+しかも最も力のない労働者を統制するための伝統的な形態だと長い間みなされていた．
+LaveWenger[p.41]
+\end{quote}
+一方，1991年にレイヴとウェンガーによって，
+「状況に埋め込まれた学習」あるいは「正統的周辺参加」
+という学習形態・概念が提案された．
+
+彼らは，アフリカの仕立て職人や助産婦の育成法を社会学的に詳しく調査した結果，
+徒弟制のなかに学びの本質があると指摘した．
+また新参者を親方，ボス，あるいは管理者と深く対立する関係に陥らせる，参加させるよりも非自発的に隷従させるなど，これらの条件は実践における学習の可能性を部分的に，もしくは完全に，歪めてしまうと唱えた．
+
+\section{卒論・ゼミ}
+\label{sec:org2ccf1d2}
+卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
+プログラミング，レポートの書き方を教える．
+この時，後輩は自らの意思で参加するという考え方であるべきだ．
+西谷研究室では，後輩が参加者となり先輩から学ぶという風潮が見受けられない．
+後輩は，卒業研究を発表すること，
+結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
+
+\section{AM/PM}
+\label{sec:org43ee83f}
+1998年数学者のSfardは，Lave and Wengerの考えを受け，
+学習者，教授者，研究者のあり方について
+AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
+
+
+表\ref{tab:orgb1c145d}
+\begin{table}[htbp]
+\caption{\label{tab:orgb1c145d}
+Acquisition metaphorとParticipation metaphorの違い}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Acquisition metaphor &  & Participation metaphor\\
+\hline
+個人を豊かにする & 学習の目標 & 共同体の構築\\
+何かを獲得する & 学習するとは & 参加者となる\\
+受容者，再構築者 & 学習者 & 周辺参加者，徒弟\\
+供給者，促進者，仲裁人 & 教授者 & 有識の参加者\\
+資産，所有物，一般商品 & 知識，コンセプト & 実践，論考，活動の一側面\\
+持つ，所有する & 知るとは & 所属する，参加する，コミュニケーションをとる\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section{PM}
+\label{sec:org9bfca59}
+関西学院大学理工学部には，
+数式処理演習，モデリング物理学という授業がある．
+これらの授業では，学生同士が自主的にペアを組み
+授業中課題や期末試験をペアで受ける．
+数式処理演習では，数式処理ソフトMapleまたはPythonを用いて，センター試験，微積分，線形代数の基礎的な問題を解くスキルを身につける．
+また，課題やテスト結果の評価は，ペアで共通するものとしている．
+ここで重要なのは，問題を解くスキルを身につけるはもちろんであるが，ペアで課題に取り組むことである．
+二人一組のチームを生成することで，「相方の足を引っ張らないように」という思考に至り，互いが怠けることなく，授業や課題に意欲的に取り組む．
+その結果，互いに高め合い，知識の定着につながる．
+「共同体の構築」，「参加する」これがPMという考え方である．
+しかし，中には知識の定着に至らない学生もいる．
+懸念される点は，ペアによる演習のため，一人が作業すれば課題をクリアできる点である．
+つまり，一人が取り組んでいる間，もう一人は考える必要がなく「休憩」の時間になる場合がある.
+
+この時，共同体として参加するという本質を失い，知識の定着に行き着かない．
+
+\#やくに立ってない．
+\#知識の定着があるわけではない．
+
+なんでやろ？
+
+ペアワーク，二人で考えて，
+フリーライダータダ乗りするから，知識が定着しない．
+
+もともと役に立つ知識ではない．
+
+数学の問題を解く
+ペアで作業を始めることの重要性が，ペアプロのはじめ．
+PMってのは，参加することに意義がある．
+参加の意思を表明することに
+システムにならんかな？
+
+難しいことをネタに，それをどうやって克服していくかというスキルを
+身につける．あるいは，それを実行するシステム．
+
+\section{構築システムのアイデア}
+\label{sec:org7b03873}
+\begin{itemize}
+\item ornb = org + ruby + ??? my\_help(private), blog, jekyll(晒しのtool)
+\end{itemize}
+
+卒業研究や授業の課題において，その過程が重要である．
+自ら行った事を過程も含めてレポートとしてまとめ，公開することで，知識構築に繋がると考える．
+レポートにまとめることは，それらの過程も含めて理解する必要がある．また，自らの復習となり，より知識として身につく．
+次に，公に公開することで，日本語や文の構築に気を使うため，学んだことの理解だけでなく，レポート作成の知識も身につくといった利点がある．
+また，公開することで他の人から指摘や意見をもらうことができるため，そこで議論を広げることで，
+より知識が定着する．
+これらを実現するために，org-mode,ruby,my\_help,jekyll,GitHub Pagesを用いて過程の重要性を気づかせるシステムを提案する．
+\subsection{org-mode}
+\label{sec:org36fc47f}
+org-modeは，Emacs上で動作するアウトライナーであり
+プレーンテキストの文書作成環境である．
+ノートの保存，TODOリストの管理，スケジュールや時間の管理，
+また発表原稿やスライドの作成など様々な用途に対応している．
+また，コードの実行はもちろん，リンク付け,テーブル表記の入力，
+図や表の表示，ライブ計算，HTMLや\LaTeX{}への変換等の
+機能も兼ね備えている.
+今回のレポートとなる文書の作成するために，org-modeを用いる．
+
+\subsection{my\_help == 直交補空間}
+\label{sec:org85536f6}
+ファイル構造において，メモやレポートが増えれば増えるほどchunkingする．
+chunkingすることにより，構造が深くなる．その結果，レポートやメモの場所
+が把握できなくる．
+my\_helpは，直交補空間を実現した知識構築を補助するツールである．
+ディレクトリに拘束される事なく，メモやレポートを作成できる利点があるため，
+どこからでもアクセスできる．
+
+
+
+directoryってのは知識のマップ．
+知識が大きくなると，chunkingする．
+深くなる．
+迷子になる．
+my\_helpってのは直交補空間に置かれている．
+いつでもaccessできて便利．
+
+\subsection{repl == jupyter notebook}
+\label{sec:orge5a6822}
+てのは試行錯誤．
+loopがある．
+jekyllとか，github, と結びつけて，システムにならないか？
+
+\subsection{jekyll == 晒すと何がいい？}
+\label{sec:org7cadede}
+jekyllはRubygemsで提供されている静的サイトジェネレーターである．
+\begin{itemize}
+\item 文章，文を気にする，
+\item 共有しやすい，
+\item 形になる，
+\begin{itemize}
+\item report
+\item 他人事だと思っているから
+\item 自分が学んでいることとの関連性を自覚する
+\item 深く理解する
+\item 経験知識に変える，説明する，議論する
+\begin{itemize}
+\item 徒弟制ではない，大学システム
+手に職を，中世のシステム
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\section{ornbの仕様}
+\label{sec:org1747e99}
+\end{document}
