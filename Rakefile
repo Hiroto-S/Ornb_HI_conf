@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 file = 'thesis'
-
+p 'hoge'
 $head0 = <<'EOS'
 \documentclass{hissymp}
 \usepackage[dvipdfmx]{graphicx}
