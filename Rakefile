@@ -68,7 +68,10 @@ def convert_thesis(lines)
     line.gsub!('\author{bob}', $head1)
     line.gsub!('\section{abstract}','\begin{abstract}')
     line.gsub!('\section{Introduction}', $head2)
+<<<<<<< HEAD
+=======
     line.gsub!('{table}', '{table*}')
+>>>>>>> 0bf7af08978391b8a4d35ae611862792a9f65b2d
 #    line.gsub!('\section','\chapter')
 #    line.gsub!('\subsection','\section')
 #    line.gsub!('\subsubsection','\subsection')
