@@ -142,13 +142,14 @@ LaveWenger[pp.8-9]
   していた．一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，「学習」とは参加者となることである．学習者は，徒弟であり，教授者は，有識の参加者と定義した．
   つまり，個人ではなく，教授者，学習者がチームとして，また徒弟制を築くことでお互いお互いの知識構築が捗る仕組みとなっている．
 
-表[[tb:table]]
+表[[table:AM/PM]]
 
-#+CAPTION: Acquisition metaphorとParticipation metaphorの違い
-#+NAME: tb:table
-#+ATTR_LaTeX: :align |l|l|l|
+#+CAPTION: Acquisition metaphorとParticipation metaphorの比較．
+#+NAME: table:AM/PM
+#+ATTR_LaTeX: :align lll
+#+ATTR_LaTeX: :placement [bt]
 |------------------------+------------------+----------------------------------------------|
-| Acquisition metaphor   |                  | Participation metaphor                       |
+| Acquisition metaphor   | 要素             | Participation metaphor                       |
 |------------------------+------------------+----------------------------------------------|
 | 個人を豊かにする       | 学習の目標       | 共同体の構築                                 |
 | 何かを獲得する         | 学習するとは     | 参加者となる                                 |
@@ -191,6 +192,10 @@ LaveWenger[pp.8-9]
   - 見習い？
   - 習慣
 学べる人はどこでも学べる？
+
+- 日報
+- ペアプロ
+- 
 
 卒業研究や授業の課題において，その過程が重要である．
 # 学生は，PMの考え方や過程の重要性に気づかない事が多いが，数式計算処理演習を受けた学生に，ペアで聞くと，「他人事だと思っているから」，「興味のない授業であるから」，「自分が学んでいることとの関連性を見出せないから」という様な意見を得た．

@@ -32,7 +32,7 @@
 
 
 \section{abstract}
-\label{sec:org9011c5b}
+\label{sec:org5e44063}
 At graduate research, 
 although the process is more important than the results,
 most students don't notice it.
@@ -48,9 +48,9 @@ ornb, whose specifications and
 the connections to a static web system, jekyll,
 
 \section{Introduction}
-\label{sec:orgaff1617}
+\label{sec:org7995675}
 \subsection{背景I - 大学の学び}
-\label{sec:org1696a89}
+\label{sec:org11c85da}
 今日の大学教育は，フンボルト理念を基礎としている．その通説を
 \begin{quote}
 近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
@@ -86,7 +86,7 @@ the connections to a static web system, jekyll,
 学生が受け取っている可能性がある．
 
 \subsection{背景II - 大学生は徒弟制を否定しがち}
-\label{sec:orge847414}
+\label{sec:org62c64ae}
 ところが，
 最新の教育を行うと看板を掲げている大学に通う今日の学生は，
 大学は研究の場であるという認識が薄く，
@@ -109,7 +109,7 @@ LaveWenger[p.41]
 これが，徒弟制に対する一般的な意識であり，大学生の多くもそのように認識していると考えられる．
 
 \subsection{目的}
-\label{sec:orgce4362d}
+\label{sec:org347b2ac}
 次節で示す通り，このような旧態然とした徒弟制も現代的な視点で
 見直しが進められている．
 本プロジェクトで提供しようとするシステムは，
@@ -125,8 +125,10 @@ LaveWenger[p.41]
 明らかにする．その上で，近代的な徒弟制を研究室活動に導入する上で
 必要となる仕様を列挙し，それに基づいた実装デザインを示す．
 
-\subsection{徒弟制の見直し}
-\label{sec:org6a6bea4}
+\section{徒弟制の見直し}
+\label{sec:org717eec5}
+\subsection{状況に埋め込まれた学習}
+\label{sec:org102658f}
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
   という学習形態・概念が提案された．
@@ -161,9 +163,9 @@ LaveWenger[pp.8-9]
 \end{quote}
 と記している．
 
-\section{AM/PM}
-\label{sec:orgc0f943d}
 
+\subsection{AM/PM}
+\label{sec:org56f0a2a}
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者のあり方について
 AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
@@ -172,15 +174,15 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
 していた．一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，「学習」とは参加者となることである．学習者は，徒弟であり，教授者は，有識の参加者と定義した．
 つまり，個人ではなく，教授者，学習者がチームとして，また徒弟制を築くことでお互いお互いの知識構築が捗る仕組みとなっている．
 
-表\ref{tab:orgf234d7a}
+表\ref{tab:org2d7bc60}
 
-\begin{table}[htbp]
-\caption{\label{tab:orgf234d7a}
-Acquisition metaphorとParticipation metaphorの違い}
+\begin{table}[bt]
+\caption{\label{tab:org2d7bc60}
+Acquisition metaphorとParticipation metaphorの比較．}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{lll}
 \hline
-Acquisition metaphor &  & Participation metaphor\\
+Acquisition metaphor & 要素 & Participation metaphor\\
 \hline
 個人を豊かにする & 学習の目標 & 共同体の構築\\
 何かを獲得する & 学習するとは & 参加者となる\\
@@ -192,19 +194,8 @@ Acquisition metaphor &  & Participation metaphor\\
 \end{tabular}
 \end{table}
 
-\section{卒論・ゼミ}
-\label{sec:orge1435c0}
-卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
-プログラミング，レポートの書き方を教える．
-この時，後輩は自らの意思で参加するという考え方であるべきだ．
-西谷研究室では，後輩が参加者となり先輩から学ぶという風潮が見受けられない．
-後輩は，卒業研究を発表すること，
-結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
-
-
-
-\section{PMの実践例とその受け止め方}
-\label{sec:orga54dd46}
+\subsection{PMの実践例と学生の受け止め方}
+\label{sec:org356a5e2}
 関西学院大学理工学部には，
 数式処理演習，モデリング物理学という授業がある．
 これらの授業では，学生同士が自主的にペアを組み
@@ -221,8 +212,34 @@ Acquisition metaphor &  & Participation metaphor\\
 これは，PMの本質を失っており，チーム全体が発展していくことがない．
 この時，共同体として参加するという本質を失い，知識の定着に行き着かない．
 
+\section{卒論・ゼミ}
+\label{sec:orgc2a13d1}
+卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
+プログラミング，レポートの書き方を教える．
+この時，後輩は自らの意思で参加するという考え方であるべきだ．
+西谷研究室では，後輩が参加者となり先輩から学ぶという風潮が見受けられない．
+後輩は，卒業研究を発表すること，
+結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
+
+
+
 \section{構築システムのアイデア}
-\label{sec:orgcdc3fec}
+\label{sec:orga47d0ad}
+\begin{itemize}
+\item このような参加型の学習を西谷研で実践するのに何が必要か？
+\item 徒弟制の本質
+\begin{itemize}
+\item 見習い？
+\item 習慣
+\end{itemize}
+\end{itemize}
+学べる人はどこでも学べる？
+
+\begin{itemize}
+\item 日報
+\item ペアプロ
+\item 
+\end{itemize}
 
 卒業研究や授業の課題において，その過程が重要である．
 
@@ -232,8 +249,9 @@ Acquisition metaphor &  & Participation metaphor\\
 また，公開することで他の人から指摘や意見をもらうことができるため，そこで議論を広げることで，
 より知識が定着する．
 これらを実現するために，org-mode,ruby,my\_help,jekyll,GitHub Pagesを用いて過程の重要性を気づかせるシステムを提案する．
-\subsection{org-mode}
-\label{sec:orgbd24d5c}
+
+\subsection{org-mode = 便利なmark down}
+\label{sec:org4587696}
 org-modeは，Emacs上で動作するアウトライナーであり
 プレーンテキストの文書作成環境である．
 ノートの保存，TODOリストの管理，スケジュールや時間の管理，
@@ -244,15 +262,13 @@ org-modeは，Emacs上で動作するアウトライナーであり
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
 \subsection{my\_help == 直交補空間}
-\label{sec:org65ae423}
+\label{sec:orgd68bacd}
 ファイル構造において，メモやレポートが増えれば増えるほどchunkingする．
 chunkingすることにより，構造が深くなる．その結果，レポートやメモの場所
 が把握できなくる．
 my\_helpは，直交補空間を実現した知識構築を補助するツールである．
 ディレクトリに拘束される事なく，メモやレポートを作成できる利点があるため，
 どこからでもアクセスできる．
-
-
 
 directoryってのは知識のマップ．
 知識が大きくなると，chunkingする．
@@ -262,13 +278,13 @@ my\_helpってのは直交補空間に置かれている．
 いつでもaccessできて便利．
 
 \subsection{repl == jupyter notebook}
-\label{sec:org63f6156}
+\label{sec:orga48a28b}
 てのは試行錯誤．
 loopがある．
 jekyllとか，github, と結びつけて，システムにならないか？
 
 \subsection{jekyll == 晒すと何がいい？}
-\label{sec:org410a6ab}
+\label{sec:orga8639f0}
 jekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
 今回の文書の公開をjekyllで行う．
@@ -290,5 +306,5 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
 \end{itemize}
 
 \section{ornbの仕様}
-\label{sec:orgba882a2}
+\label{sec:org481bdaf}
 \end{document}
