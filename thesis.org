@@ -1,15 +1,8 @@
 #+OPTIONS: ^:{}
 #+STARTUP: indent nolineimages
-#+TITLE: 知識構築システムornbを利用した学習過程の考察
-#+latex_header: \usepackage{authblk}
-#+latex_header: \author[1]{河野大登(Kono Hiroto)}
-#+latex_header: \author[1]{福森聡(Satoshi Fukumori)}
-#+latex_header: \author[1]{西谷滋人(Shigeto R. Nishitani)}
-#+latex_header: \affil[1]{関西学院大学理工学部情報科学科(三田市)．Department of Informatics, Kwansei Gakuin University(Sanda-shi, Hyogo).}
 #+LANGUAGE:  jp
 #+OPTIONS:  toc:nil  timestamp:nil
-#+date:                                                                                                                 
-# #+latex_class: jsarticle
+#+DATE:
 
 * abstract
   At graduate research, 

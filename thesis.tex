@@ -18,27 +18,21 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage{authblk}
-\author[1]{河野大登(Kono Hiroto)}
-\author[1]{福森聡(Satoshi Fukumori)}
-\author[1]{西谷滋人(Shigeto R. Nishitani)}
-\affil[1]{関西学院大学理工学部情報科学科(三田市)．Department of Informatics, Kwansei Gakuin University(Sanda-shi, Hyogo).}
 \author{bob}
 \date{}
-\title{知識構築システムornbを利用した学習過程の考察}
+\title{}
 \hypersetup{
  pdfauthor={bob},
- pdftitle={知識構築システムornbを利用した学習過程の考察},
+ pdftitle={},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
  pdflang={Jp}}
 \begin{document}
 
-\maketitle
 
 \section{abstract}
-\label{sec:org6e2d32a}
+\label{sec:org0f1cceb}
 At graduate research, 
 although the process is more important than the results,
 most students don't notice it.
@@ -54,9 +48,9 @@ ornb, whose specifications and
 the connections to a static web system, jekyll,
 
 \section{Introduction}
-\label{sec:org37302ac}
+\label{sec:org2258c99}
 \subsection{背景I - 大学の学び}
-\label{sec:org2b70801}
+\label{sec:orgae18116}
 今日の大学教育は，フンボルト理念を基礎としている．その通説を
 \begin{quote}
 近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
@@ -92,7 +86,7 @@ the connections to a static web system, jekyll,
 学生が受け取っている可能性がある．
 
 \subsection{背景II - 大学生は徒弟制を否定しがち}
-\label{sec:org93254f0}
+\label{sec:org407e216}
 ところが，
 最新の教育を行うと看板を掲げている大学に通う今日の学生は，
 大学は研究の場であるという認識が薄く，
@@ -149,7 +143,7 @@ LaveWenger[pp.8-9]
 \end{quote}
 
 \section{卒論・ゼミ}
-\label{sec:org63de5d1}
+\label{sec:org27b0fd8}
 卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
 プログラミング，レポートの書き方を教える．
 この時，後輩は自らの意思で参加するという考え方であるべきだ．
@@ -158,7 +152,7 @@ LaveWenger[pp.8-9]
 結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
 
 \section{AM/PM}
-\label{sec:orgfc08b41}
+\label{sec:orgb194082}
 
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者のあり方について
@@ -168,10 +162,10 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
 していた．一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，「学習」とは参加者となることである．学習者は，徒弟であり，教授者は，有識の参加者と定義した．
 つまり，個人ではなく，教授者，学習者がチームとして，また徒弟制を築くことでお互いお互いの知識構築が捗る仕組みとなっている．
 
-表\ref{tab:orgc686837}
+表\ref{tab:org9c2c4d0}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgc686837}
+\caption{\label{tab:org9c2c4d0}
 Acquisition metaphorとParticipation metaphorの違い}
 \centering
 \begin{tabular}{|l|l|l|}
@@ -189,7 +183,7 @@ Acquisition metaphor &  & Participation metaphor\\
 \end{table}
 
 \section{PMの実践例とその受け止め方}
-\label{sec:org2fc986b}
+\label{sec:org31f1417}
 関西学院大学理工学部には，
 数式処理演習，モデリング物理学という授業がある．
 これらの授業では，学生同士が自主的にペアを組み
@@ -207,7 +201,7 @@ Acquisition metaphor &  & Participation metaphor\\
 この時，共同体として参加するという本質を失い，知識の定着に行き着かない．
 
 \section{構築システムのアイデア}
-\label{sec:orge53e136}
+\label{sec:orge2a4846}
 
 卒業研究や授業の課題において，その過程が重要である．
 
@@ -218,7 +212,7 @@ Acquisition metaphor &  & Participation metaphor\\
 より知識が定着する．
 これらを実現するために，org-mode,ruby,my\_help,jekyll,GitHub Pagesを用いて過程の重要性を気づかせるシステムを提案する．
 \subsection{org-mode}
-\label{sec:org9918c31}
+\label{sec:org22d0e31}
 org-modeは，Emacs上で動作するアウトライナーであり
 プレーンテキストの文書作成環境である．
 ノートの保存，TODOリストの管理，スケジュールや時間の管理，
@@ -229,7 +223,7 @@ org-modeは，Emacs上で動作するアウトライナーであり
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
 \subsection{my\_help == 直交補空間}
-\label{sec:orgcda925f}
+\label{sec:orgfbe8a76}
 ファイル構造において，メモやレポートが増えれば増えるほどchunkingする．
 chunkingすることにより，構造が深くなる．その結果，レポートやメモの場所
 が把握できなくる．
@@ -247,13 +241,13 @@ my\_helpってのは直交補空間に置かれている．
 いつでもaccessできて便利．
 
 \subsection{repl == jupyter notebook}
-\label{sec:orgf47e0d9}
+\label{sec:org8d2029a}
 てのは試行錯誤．
 loopがある．
 jekyllとか，github, と結びつけて，システムにならないか？
 
 \subsection{jekyll == 晒すと何がいい？}
-\label{sec:org2b94e84}
+\label{sec:org17230c7}
 jekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
 今回の文書の公開をjekyllで行う．
@@ -275,5 +269,5 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
 \end{itemize}
 
 \section{ornbの仕様}
-\label{sec:orgafbddd0}
+\label{sec:org0766e3d}
 \end{document}

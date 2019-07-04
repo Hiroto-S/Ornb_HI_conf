@@ -1,6 +1,6 @@
 % Intended LaTeX compiler: pdflatex
 
-  \documentclass{jsarticle}
+  \documentclass[a4,p11]{article}
   \usepackage[dvipdfmx]{graphicx}
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
@@ -18,28 +18,21 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage{authblk}
-\author[1]{河野大登(Kono Hiroto)}
-\author[1]{福森聡(Satoshi Fukumori)}
-\author[1]{西谷滋人(Shigeto R. Nishitani)}
-\affil[1]{関西学院大学理工学部情報科学科(三田市)．Department of Informatics, Kwansei Gakuin University(Sanda-shi, Hyogo).}
-\author{\texttt{S}}
-\date{}
-\title{知識構築システムornbを利用した学習過程の考察}
+\author{bob}
+\date{\today}
+\title{}
 \hypersetup{
- pdfauthor={\texttt{S}},
- pdftitle={知識構築システムornbを利用した学習過程の考察},
+ pdfauthor={bob},
+ pdftitle={},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
  pdflang={Jp}}
 \begin{document}
 
-\maketitle
-
 
 \section{abstract}
-\label{sec:org5fcc89d}
+\label{sec:orgc8d7584}
 At graduate research, 
 although the process is more important than the results,
 most students don't notice it.
@@ -51,22 +44,26 @@ a mentor and a padawan learner.
 On this project, 
 we are developing a system for
 noticing importance of learning process,
-ornb, whose specifications and the 
-connections to a static web system, jekyll,
+ornb, whose specifications and 
+the connections to a static web system, jekyll,
 
-\section{はじめに}
-\label{sec:org967ef3c}
-今日の大学教育は，フンボルト理念を基礎としている．
-フンボルト理念は1810年にヴィルヘルム・フォン・フンボルトが，ベルリン大学を創設した．
-ベルリン大学は，近代大学の出発点と呼ばれており，このフンボルト理念から始まった．
-フンボルト理念の中核は研究中心主義である．
-フンボルトは,「知識はまだ明らかにされていないもの」と扱い，
-学ぶ学生以上に，研究する学生像を浮かび上らせ，
-ゼミナールや実験室，研究室の存在の大きさを？唱えた．
-つまり，大学は教育の場である以上に研究の場であり，
-これらの考え方がドイツのみならず，世界の大学を変えた．
+\section{Introduction}
+\label{sec:org6b81c43}
+\subsection{背景I - 大学の学び}
+\label{sec:org05c4768}
+今日の大学教育は，フンボルト理念を基礎としている．その通説を
+\begin{quote}
+近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
+\end{quote}
+と潮木はまとめている．
+\begin{itemize}
+\item アルカディア学報（教育学術新聞掲載コラム）,No.246
+\end{itemize}
+この後，潮木はその著書でフンボルト理念が単なる「神話だった」と力説している．
 
-それが，授業への出席，
+日本の工学を中心とする学部においては，
+研究至上主義としてのフンボルト理念が，
+大規模講義形式の授業への出席，
 レポートや期末試験を経て単位を取得する仕組みに繋がっている．
 
 しかし，学生は，意欲的に授業に参加し，
@@ -88,10 +85,17 @@ connections to a static web system, jekyll,
 結果のみを求めているという誤ったメッセージとして，
 学生が受け取っている可能性がある．
 
-\section{大学生は徒弟制を否定しがち}
-\label{sec:org8f2bcb9}
-大学に通う学生は，大学は研究の場であるという認識が薄く，
-卒業研究や，研究室における徒弟制に気づいていない．
+\subsection{背景II - 大学生は徒弟制を否定しがち}
+\label{sec:orgbc99814}
+ところが，
+最新の教育を行うと看板を掲げている大学に通う今日の学生は，
+大学は研究の場であるという認識が薄く，
+卒業研究や，研究室におけるゼミへの参加に
+どのようなスタンスで取り組めがいいか
+明確には理解できない．
+ある意味，学生には，研究室とは，
+「大学システムが切り捨てようとして来た，徒弟制的な制度である」
+ということは全く脳裏にない．
 
 \begin{quote}
 1989年にグロスハンスの指摘によれば，
@@ -103,16 +107,43 @@ connections to a static web system, jekyll,
 しかも最も力のない労働者を統制するための伝統的な形態だと長い間みなされていた．
 LaveWenger[p.41]
 \end{quote}
-一方，1991年にレイヴとウェンガーによって，
-「状況に埋め込まれた学習」あるいは「正統的周辺参加」
-という学習形態・概念が提案された．
+これが，徒弟制に対する一般的な意識であり，大学生の多くもそのように認識していると考えられる．
 
-彼らは，アフリカの仕立て職人や助産婦の育成法を社会学的に詳しく調査した結果，
-徒弟制のなかに学びの本質があると指摘した．
+一方，1991年にレイヴとウェンガーによって，
+  「状況に埋め込まれた学習」あるいは「正統的周辺参加」
+  という学習形態・概念が提案された．
+  彼らは，アフリカの仕立て職人や助産婦の育成法を社会学的に詳しく調査した結果，
+  徒弟制のなかに学びの本質があると指摘した．
+少し複雑ではあるが，その概念をもっとも短くまとめたと思われる箇所を
+以下にそのまま書き写す．
+\begin{quote}
+  学習はいわば参加という枠組で生じる過程であり，
+  個人の頭の中でではないのである．
+  このことは，とりもなおさず，
+共同参加者の間での異なった見え方の違いによって学習が媒介されるということである．
+この定義では「学ぶ」のは共同体である，
+あるいは少なくとも，
+学習の流れ(context)に参加している人たち，といえよう．
+学習はいわば，共同参加者間にわかち持たれているのであり，
+一人の人間の行為ではない．
+生産過程では徒弟(見習い)が益々増大していく
+参加によってきわめてドラマティックに変容していくものではあるが，
+この変容の発生の場と発生の条件は，さらに広範囲の過程そのものである．
+徒弟の親方たち自身が共同学習者としてふるまうことを通しどれほど変化するか，
+したがって，習熟されている技能でもその過程でどれほど変化するか．
+実践者の共同体がより大きくなると，
+徒弟の形成によって共同体は自らを再生させるが，
+同時に変容もすると考えられる．
+LaveWenger[pp.8-9]
+\end{quote}
+
+\begin{quote}
 また新参者を親方，ボス，あるいは管理者と深く対立する関係に陥らせる，参加させるよりも非自発的に隷従させるなど，これらの条件は実践における学習の可能性を部分的に，もしくは完全に，歪めてしまうと唱えた．
+  LaveWenger[p.42]
+\end{quote}
 
 \section{卒論・ゼミ}
-\label{sec:org358da81}
+\label{sec:orgc9f4cce}
 卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
 プログラミング，レポートの書き方を教える．
 この時，後輩は自らの意思で参加するという考え方であるべきだ．
@@ -121,7 +152,8 @@ LaveWenger[p.41]
 結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
 
 \section{AM/PM}
-\label{sec:orgb6cb26c}
+\label{sec:orgd3e0e69}
+
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者のあり方について
 AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
@@ -129,11 +161,11 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
 「学習」とは何かを獲得することであった．また，「知る」は個人が所有するものであると
 していた．一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，「学習」とは参加者となることである．学習者は，徒弟であり，教授者は，有識の参加者と定義した．
 つまり，個人ではなく，教授者，学習者がチームとして，また徒弟制を築くことでお互いお互いの知識構築が捗る仕組みとなっている．
-「学ぶ」のは共同体であり，学習の流れに参加している人である．生産過程では徒弟が参加する
 
-表\ref{tab:org1ce3c3b}
+表\ref{tab:org5bc43e2}
+
 \begin{table}[htbp]
-\caption{\label{tab:org1ce3c3b}
+\caption{\label{tab:org5bc43e2}
 Acquisition metaphorとParticipation metaphorの違い}
 \centering
 \begin{tabular}{|l|l|l|}
@@ -150,8 +182,8 @@ Acquisition metaphor &  & Participation metaphor\\
 \end{tabular}
 \end{table}
 
-\section{PM}
-\label{sec:org6f32b3c}
+\section{PMの実践例とその受け止め方}
+\label{sec:orgf6a8761}
 関西学院大学理工学部には，
 数式処理演習，モデリング物理学という授業がある．
 これらの授業では，学生同士が自主的にペアを組み
@@ -168,31 +200,8 @@ Acquisition metaphor &  & Participation metaphor\\
 これは，PMの本質を失っており，チーム全体が発展していくことがない．
 この時，共同体として参加するという本質を失い，知識の定着に行き着かない．
 
-
-\#やくに立ってない．
-\#知識の定着があるわけではない．
-
-なんでやろ？
-
-ペアワーク，二人で考えて，
-フリーライダータダ乗りするから，知識が定着しない．
-
-もともと役に立つ知識ではない．
-
-数学の問題を解く
-ペアで作業を始めることの重要性が，ペアプロのはじめ．
-PMってのは，参加することに意義がある．
-参加の意思を表明することに
-システムにならんかな？
-
-難しいことをネタに，それをどうやって克服していくかというスキルを
-身につける．あるいは，それを実行するシステム．
-
 \section{構築システムのアイデア}
-\label{sec:orgf8af29e}
-\begin{itemize}
-\item ornb = org + ruby + ??? my\_help(private), blog, jekyll(晒しのtool)
-\end{itemize}
+\label{sec:org7ea83a4}
 
 卒業研究や授業の課題において，その過程が重要である．
 
@@ -203,7 +212,7 @@ PMってのは，参加することに意義がある．
 より知識が定着する．
 これらを実現するために，org-mode,ruby,my\_help,jekyll,GitHub Pagesを用いて過程の重要性を気づかせるシステムを提案する．
 \subsection{org-mode}
-\label{sec:orgd6861f9}
+\label{sec:org5daf230}
 org-modeは，Emacs上で動作するアウトライナーであり
 プレーンテキストの文書作成環境である．
 ノートの保存，TODOリストの管理，スケジュールや時間の管理，
@@ -214,7 +223,7 @@ org-modeは，Emacs上で動作するアウトライナーであり
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
 \subsection{my\_help == 直交補空間}
-\label{sec:org77a579f}
+\label{sec:orgfa2ba53}
 ファイル構造において，メモやレポートが増えれば増えるほどchunkingする．
 chunkingすることにより，構造が深くなる．その結果，レポートやメモの場所
 が把握できなくる．
@@ -232,13 +241,13 @@ my\_helpってのは直交補空間に置かれている．
 いつでもaccessできて便利．
 
 \subsection{repl == jupyter notebook}
-\label{sec:orgc36fa9b}
+\label{sec:org6349104}
 てのは試行錯誤．
 loopがある．
 jekyllとか，github, と結びつけて，システムにならないか？
 
 \subsection{jekyll == 晒すと何がいい？}
-\label{sec:org2c71569}
+\label{sec:orgd379034}
 jekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
 今回の文書の公開をjekyllで行う．
@@ -260,8 +269,5 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
 \end{itemize}
 
 \section{ornbの仕様}
-\label{sec:org1b90e46}
-
-
-\noindent\rule{\textwidth}{0.5pt}
+\label{sec:org01a2acc}
 \end{document}
