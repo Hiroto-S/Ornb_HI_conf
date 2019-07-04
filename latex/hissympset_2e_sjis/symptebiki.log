@@ -1,46 +1,45 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2018.3.27)  3 JUL 2019 14:42
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2019.7.3)  3 JUL 2019 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **symptebiki.tex
 (./symptebiki.tex
-pLaTeX2e <2017/10/28>+4 (based on LaTeX2e <2017-04-15>)
-Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+pLaTeX2e <2019-04-06> (based on LaTeX2e <2018-12-01>)
 (./hissymp.cls
 hissymp.cls; Version 1.0 [Jan. 17, 2007]
 \h@=\dimen118
 \JQ=\dimen119
 \Q=\dimen120
 \@bs=\dimen121
-\Secbox=\box42
+\Secbox=\box43
 \@qqvsep=\skip41
-\c@section=\count82
-\c@subsection=\count83
-\c@subsubsection=\count84
-\c@paragraph=\count85
-\c@subparagraph=\count86
-\@capnumbox=\box43
-\@tempboxb=\box44
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\@capnumbox=\box44
+\@tempboxb=\box45
 \capwidth=\dimen122
 \@abovecaptionskip=\dimen123
 \@belowcaptionskip=\dimen124
 \ecapwidth=\dimen125
-\@parc@ption=\box45
-\c@figure=\count87
-\c@table=\count88
-\abstractbox=\box46
-\keywordbox=\box47
-\year@cnt=\count89
-\c@subpage=\count90
+\@parc@ption=\box46
+\c@figure=\count88
+\c@table=\count89
+\abstractbox=\box47
+\keywordbox=\box48
+\year@cnt=\count90
+\c@subpage=\count91
 \mathindent=\dimen126
-\@minsofar=\count91
-\@min=\count92
-\@cite@temp=\count93
-\c@PROFILE=\count94
+\@minsofar=\count92
+\@min=\count93
+\@cite@temp=\count94
+\c@PROFILE=\count95
 \@heightofprofile=\dimen127
-\@profile=\box48
-\@heightofprofile=\dimen128
 \@profile=\box49
+\@heightofprofile=\dimen128
+\@profile=\box50
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -123,12 +122,12 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 176.
 
 [2] [3] (./symptebiki.aux) ) 
 Here is how much of TeX's memory you used:
- 822 strings out of 493640
- 8891 string characters out of 6148698
- 82425 words of memory out of 5000000
- 4468 multiletter control sequences out of 15000+600000
+ 817 strings out of 493216
+ 8847 string characters out of 6143983
+ 88709 words of memory out of 5000000
+ 4857 multiletter control sequences out of 15000+600000
  20883 words of font info for 80 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 26i,11n,25p,515b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26i,10n,25p,515b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on symptebiki.dvi (3 pages, 20652 bytes).
+Output written on symptebiki.dvi (3 pages, 20496 bytes).

@@ -33,7 +33,7 @@
 \author[1]{福森聡(Satoshi Fukumori)}
 \author[1]{西谷滋人(Shigeto R. Nishitani)}
 \affil[1]{関西学院大学理工学部情報科学科(三田市)．Department of Informatics, Kwansei Gakuin University(Sanda-shi, Hyogo).}
-\author{\texttt{S}}
+
 \date{}
 \title{知識構築システムornbを利用した学習過程の考察}
 \hypersetup{
@@ -62,7 +62,7 @@ On this project,
 we are developing a system for
 noticing importance of learning process,
 ornb, whose specifications and the 
-connections to a static web system, jekyll,
+connections to a static web system, jekyll.
 
 \chapter{はじめに}
 \label{sec:org967ef3c}
