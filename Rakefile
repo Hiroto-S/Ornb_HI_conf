@@ -20,18 +20,8 @@ end
 
 def convert_thesis(lines)
   head = <<'EOS'
-  \documentclass[12pt,a4]{jreport}%chapterが使えるスタイル
-   \usepackage{setspace}
-   %余白の設定
-\setlength{\textheight}{\paperheight}
- \setlength{\topmargin}{4.6truemm}
- \addtolength{\topmargin}{-\headheight}
- \addtolength{\topmargin}{-\headsep}
- \addtolength{\textheight}{-60truemm}
- \setlength{\textwidth}{\paperwidth}
- \setlength{\oddsidemargin}{-0.4truemm}
- \setlength{\evensidemargin}{-0.4truemm}
- \addtolength{\textwidth}{-50truemm}
+\documentclass{hissymp}
+\usepackage[dvipdfmx]{graphicx}
 EOS
   new_line = [head]
   lines[4..-1].each do |line|
@@ -43,9 +33,9 @@ EOS
   end
 
   new_line.each do |line|
-    line.gsub!('\section','\chapter')
-    line.gsub!('\subsection','\section')
-    line.gsub!('\subsubsection','\subsection')
+#    line.gsub!('\section','\chapter')
+#    line.gsub!('\subsection','\section')
+#    line.gsub!('\subsubsection','\subsection')
   end
   return new_line
 end

@@ -1,12 +1,13 @@
 \BOOKMARK [1][-]{section.1}{abstract}{}% 1
-\BOOKMARK [1][-]{section.2}{はじめに}{}% 2
-\BOOKMARK [1][-]{section.3}{大学生は徒弟制を否定しがち}{}% 3
-\BOOKMARK [1][-]{section.4}{卒論・ゼミ}{}% 4
-\BOOKMARK [1][-]{section.5}{AM/PM}{}% 5
-\BOOKMARK [1][-]{section.6}{PM}{}% 6
-\BOOKMARK [1][-]{section.7}{構築システムのアイデア}{}% 7
-\BOOKMARK [2][-]{subsection.7.1}{org-mode}{section.7}% 8
-\BOOKMARK [2][-]{subsection.7.2}{my\137help == 直交補空間}{section.7}% 9
-\BOOKMARK [2][-]{subsection.7.3}{repl == jupyter notebook}{section.7}% 10
-\BOOKMARK [2][-]{subsection.7.4}{jekyll == 晒すと何がいい？}{section.7}% 11
-\BOOKMARK [1][-]{section.8}{ornbの仕様}{}% 12
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{背景I - 大学の学び}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{背景II - 大学生は徒弟制を否定しがち}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{卒論・ゼミ}{}% 5
+\BOOKMARK [1][-]{section.4}{AM/PM}{}% 6
+\BOOKMARK [1][-]{section.5}{PMの実践例とその受け止め方}{}% 7
+\BOOKMARK [1][-]{section.6}{構築システムのアイデア}{}% 8
+\BOOKMARK [2][-]{subsection.6.1}{org-mode}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.2}{my\137help == 直交補空間}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.3}{repl == jupyter notebook}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.4}{jekyll == 晒すと何がいい？}{section.6}% 12
+\BOOKMARK [1][-]{section.7}{ornbの仕様}{}% 13
