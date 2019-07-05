@@ -1,0 +1,31 @@
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2019-07-01 月 14:03
+  :ARCHIVE_FILE: ~/.my_help/blog.org
+  :ARCHIVE_CATEGORY: blog
+  :END:
+2019年度の卒論テーマの検討．6/13(mon), 13:00-配属決定予定．
+- [[https://ist.ksc.kwansei.ac.jp/~nishitani/?MBTheses][MBTheses]]
+** 卒論theme
+後ろにつけた名前は前記のMBThesesの卒論者名です．
+- boundary(中野，西谷)粒界
+  - Cu第一原理計算, 18山田
+      - super computer but 
+      「Cuの小傾角粒界の第一原理計算」
+  - processing表示, 18白木，16成田
+     - EAM_analysis + processing
+     - 「EAM解析のprocessing実装」
+  - 溶質効果, 第一原理計算，18中野
+     - 「Al粒界におけるSn溶質原子の効果」
+- LPSO(日山) Mg, 18日山
+  - 収束性評価，誤差評価
+      - 高精度再計算
+  - 「異なった方位のsmall cluster安定性計算」
+  - SiC stability, surface energy, 再計算
+- ornb(河野)，18高橋，18河野，18大津，17大八木, 16那須，16山根
+  - ornb + rspec(test駆動) + REPL
+      - [[https://github.com/erikhuda/thor]]
+      - [[https://qiita.com/miya0001/items/f0d94ae144c85483354e][Thor で作ったサブコマンドを Rspec でテストする]]
+      - [[http://rikuga.me/2018/03/17/how-to-create-gem-using-thor/][Thorを使ってコマンドラインツールを作成してテストを通す]]
+  - web公開，Jekyll+elastic search
+      - [[http://melborne.github.io/2012/05/13/first-step-of-jekyll/][30分のチュートリアルでJekyllを理解する]]
+  - hiki2jekyll converter
