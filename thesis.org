@@ -388,14 +388,21 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
 また，不明瞭な点のあぶり出しが可能になる．
 
 ** レポートの作成と公開
-まず，レポートの作成について述べる．
+まずはじめにレポート作成から公開までの流れは図[[fg:myhelp_to_jekyll]]のようになる．
+#+caption: レポート作成から公開までの流れ
+#+name: fg:myhelp_to_jekyll
+#+ATTR_LATEX: :width 8cm
+[[file:./images/myhelp_to_jekyll.png]]
+
+
+次に，レポートの作成について述べる．
 レポートの作成はRubygemseで提供されている,
 my_helpを用いる．
 
 my_helpを以下の方法でインストールする．
 #+begin_quote
   #+begin_example
-  gem install my_helo
+  gem install my_help
   #+end_example
 #+end_quote
 
@@ -420,7 +427,7 @@ my_helpを以下の方法でインストールする．
 図[[fg:add_date]]のような日付を付けることとする．
 #+caption: 日付を付ける例
 #+name: fg:add_date
-#+ATTR_LATEX: :width 13cm
+#+ATTR_LATEX: :width 8cm
 [[file:./images/add_date.png]]
 
 また，以下のコマンドで日付を付ける事が出来る．
@@ -435,6 +442,7 @@ my_helpを以下の方法でインストールする．
 ** Jekyllのインストールと実行
 Blogの作成と公開はJekyllとGithub Pagesを用いる．
 以下にその手順を記述する．
+[[https://qiita.com/daddygongon/items/9b7182db29861744fc79][jekyllのinstallとGitHub Pagesとの連携]]
 
 はじめに，Jekyllをインストールする．
 #+begin_quote
@@ -446,6 +454,8 @@ Blogの作成と公開はJekyllとGithub Pagesを用いる．
 次にローカルサーバを立ち上げる.
 #+begin_quote
   #+begin_example
-  gem install my_helo
+  jekyll new my-awesome-site
+  cd my-awesome-site
+  bundle exec jekyll serve
   #+end_example
 #+end_quote
