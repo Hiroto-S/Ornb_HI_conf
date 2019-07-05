@@ -373,4 +373,79 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
       手に職を，中世のシステム
 
 * ornbの仕様
+** スタンプ集め
+例えば
+- 全員jekyllを入れて，blogを晒す
+というゼミで実行した課題があるとする．そいつを全員が実行したかどうかを，教えた方がチェックする．
+手順は以下の通り，
+- 欠席者が出席者に聞く
+- 出席者がスタンプを押す
+- それが埋まってなかったら卒業なし．
+これを自動化するシステム．
 
+いっぺん聞いたら他の人に教えるのはあり．
+そうすると，教えることによる記憶強化の可能性が高まる．
+また，不明瞭な点のあぶり出しが可能になる．
+
+** レポートの作成と公開
+まず，レポートの作成について述べる．
+レポートの作成はRubygemseで提供されている,
+my_helpを用いる．
+
+my_helpを以下の方法でインストールする．
+#+begin_quote
+  #+begin_example
+  gem install my_helo
+  #+end_example
+#+end_quote
+
+次に，my_helpにblogというlistを作成するために，
+以下のコマンドを実行する．
+
+#+begin_quote
+  #+begin_example
+  my_help new blog
+  #+end_example
+#+end_quote
+
+これで新しいlistが作成される．
+次にblogの内容を編集するため，以下を実行する．
+#+begin_quote
+  #+begin_example
+  my_help edit blog
+  #+end_example
+#+end_quote
+
+編集画面では，タイトルをつけた後，タイトルの横に
+図[[fg:add_date]]のような日付を付けることとする．
+#+caption: 日付を付ける例
+#+name: fg:add_date
+#+ATTR_LATEX: :width 13cm
+[[file:./images/add_date.png]]
+
+また，以下のコマンドで日付を付ける事が出来る．
+#+begin_quote
+  #+begin_example
+  Control-u Control-c .
+  #+end_example
+#+end_quote
+
+あとは，Blogの内容を書き込んでいく．
+
+** Jekyllのインストールと実行
+Blogの作成と公開はJekyllとGithub Pagesを用いる．
+以下にその手順を記述する．
+
+はじめに，Jekyllをインストールする．
+#+begin_quote
+  #+begin_example
+  gem install bundler jekyll
+  #+end_example
+#+end_quote
+
+次にローカルサーバを立ち上げる.
+#+begin_quote
+  #+begin_example
+  gem install my_helo
+  #+end_example
+#+end_quote
