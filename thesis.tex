@@ -1,6 +1,6 @@
 % Intended LaTeX compiler: pdflatex
 
-  \documentclass[a4,p11]{article}
+  \documentclass{jsarticle}
   \usepackage[dvipdfmx]{graphicx}
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
@@ -18,11 +18,11 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\author{bob}
+\author{\texttt{S}}
 \date{}
 \title{}
 \hypersetup{
- pdfauthor={bob},
+ pdfauthor={\texttt{S}},
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
@@ -32,7 +32,7 @@
 
 
 \section{abstract}
-\label{sec:org718d83b}
+\label{sec:orgc0433c4}
 At graduate research, 
 although the process is more important than the results,
 most students don't notice it.
@@ -48,9 +48,9 @@ ornb, whose specifications and
 the connections to a static web system, jekyll,
 
 \section{Introduction}
-\label{sec:org8ddc7c6}
+\label{sec:orgad06064}
 \subsection{背景I - 大学の学び}
-\label{sec:org95f2f75}
+\label{sec:orga8b2152}
 今日の大学教育は，フンボルト理念を基礎としている．その通説を
 \begin{quote}
 近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
@@ -86,7 +86,7 @@ the connections to a static web system, jekyll,
 学生が受け取っている可能性がある．
 
 \subsection{背景II - 大学生は徒弟制を否定しがち}
-\label{sec:orgd7a3f58}
+\label{sec:org02ac0ec}
 ところが，
 最新の教育を行うと看板を掲げている大学に通う今日の学生は，
 大学は研究の場であるという認識が薄く，
@@ -109,7 +109,7 @@ LaveWenger[p.41]
 これが，徒弟制に対する一般的な意識であり，大学生の多くもそのように認識していると考えられる．
 
 \subsection{目的}
-\label{sec:org60dc5bc}
+\label{sec:org0923809}
 次節で示す通り，このような旧態然とした徒弟制も現代的な視点で
 見直しが進められている．
 本プロジェクトで提供しようとするシステムは，
@@ -127,9 +127,9 @@ LaveWenger[p.41]
 必要となる仕様を列挙し，それに基づいた実装デザインを示す．
 
 \section{徒弟制の見直し}
-\label{sec:org894346f}
+\label{sec:org8d66141}
 \subsection{状況に埋め込まれた学習}
-\label{sec:org1d6cfa1}
+\label{sec:org89a80b0}
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
   という学習形態・概念が提案された．
@@ -164,7 +164,7 @@ LaveWenger[pp.8-9]
 と記している．
 
 \subsection{AM/PM}
-\label{sec:org2f4cdf7}
+\label{sec:org3bf5853}
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者のあり方について
 AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
@@ -173,10 +173,10 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
 していた．一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，「学習」とは参加者となることである．学習者は，徒弟であり，教授者は，有識の参加者と定義した．
 つまり，個人ではなく，教授者，学習者がチームとして，また徒弟制を築くことでお互いお互いの知識構築が捗る仕組みとなっている．
 
-表\ref{tab:org878d9c9}
+表\ref{tab:orgdde65b1}
 
 \begin{table}[bt]
-\caption{\label{tab:org878d9c9}
+\caption{\label{tab:orgdde65b1}
 Acquisition metaphorとParticipation metaphorの比較．}
 \centering
 \begin{tabular}{lll}
@@ -194,9 +194,9 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 \end{table}
 
 \subsection{PMの実践例と学生の受け止め方}
-\label{sec:org81f0b6c}
+\label{sec:orga4eed65}
 \subsubsection{ペア評価の意図}
-\label{sec:org6d731f7}
+\label{sec:org1ad99ee}
 関西学院大学理工学部・情報科学科で
 西谷が参加型学習の試みとして
 数式処理演習という3年生向けの演習がある．
@@ -213,7 +213,16 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 しかし，実際には知識の定着に至らない学生が
 多数いる．
 \subsubsection{学生の見え方}
-\label{sec:orgbfbc9c1}
+\label{sec:orgb48ec7c}
+教育の非対称性，
+\begin{itemize}
+\item 教える側はどう役にたつかを知っているが，
+\item 教わる側は，知識を獲得するまでわからない．
+\end{itemize}
+：ダンス：
+京大アメフトの水野監督：運動神経がない人に教えるときは，喋れ．
+体で覚えるのは，偶然の失敗．
+
 \begin{itemize}
 \item サボりたい
 \item どこで役にたつかわからない
@@ -263,8 +272,16 @@ PMを理解した生徒，
 
 
 \section{卒論・ゼミ}
-\label{sec:org36569c3}
-参加したいと思わすには，どうすればいい？
+\label{sec:orge1b361a}
+前提条件として，西谷けんにきた学生は
+\begin{itemize}
+\item サボりたい
+\item どこで役にたつかわからない
+\item 役に立たない
+\end{itemize}
+としようよ．
+
+それでも，西谷研に参加したいと思わすには，どうすればいい？
 
 \begin{itemize}
 \item やりたいことを聞いて，それをさせる
@@ -276,16 +293,18 @@ PMを理解した生徒，
 \item 自信が持てるような活動
 \item そういうことをしているということに気づいてもらう？
 \item codingができるようになってきているから．
-
-\item サボりたい
-\item どこで役にたつかわからない
-\item 役に立たない
+\item 実感させるシステム？
+\item 周りに反応してもらう，
 \end{itemize}
+
+知識，反応，行動が「強化される」．
+
 
 客観的な事実の記述
 \begin{itemize}
+\item merit見えない, demerit時間が取られる
 \item 西谷研究室では，生徒の出席率が悪い．
-これの要因は，他人任せであることが一番大きい．
+これの原因は，他人任せであることが一番大きい．
 「誰かが出席していれば，なんとかしてくれる」，
 「欠席による出席者より理解が遅れるという危機感の無さ」，
 「プライベートとゼミとの優先順位がおかしい」
@@ -300,9 +319,62 @@ PMを理解した生徒，
 \end{itemize}
 
 \section{構築システムのアイデア}
-\label{sec:org66e1738}
+\label{sec:orgae21a63}
+以上の考察に従って，
+研究室運用システムとして
+\begin{itemize}
+\item 日々の個人活動を構成員に公開する
+\item ペアによる個別指導
+\item 欠席者のフォロー
+\end{itemize}
+を提供することを当初の目標とした．
+
+\subsection{これらを運用するために}
+\label{sec:orgf130331}
+\begin{itemize}
+\item まず初めに，レポートを作成し，日々の個人活動を構成員に公開する方法として，my\_help,Jekyll,GitHub Pagesを用いたシステムを開発した．
+my\_helpはRubygemsで提供されている，
+直交補空間を実現した知識構築を補助するツールである．
+ディレクトリに拘束される事なく，
+メモやレポートを作成・管理できるという利点があるため，
+どこからでもアクセスできる．
+my\_helpではBlogという形で文書を作成し，構成員に日報を伝える．
+
+my\_helpでBlogはorg-modeで作成されるが，JekyllではMarkdownがBlog
+記事となるため，orgファイルをmdファイルに変換し，Jekyllで公開する記事
+次に，my\_helpで作成されたBlogをJekyllとGitHub Pagesを用いて公開する．
+Jekyllは，Rubygemsで提供される静的サイトジェネレーターである．
+また，GitHub Pagesと連携し公に公開する．
+\end{itemize}
+
+
+\subsection{デザイン（つもり）}
+\label{sec:org7f28c3d}
+\begin{itemize}
+\item ペアの活動がスムーズに進むように環境を提供する．
+\end{itemize}
+今は，ゼミを中心とした個別の時間調整で行っている．
+遠隔でも実践できるようなシステム．
+\begin{itemize}
+\item 欠席者の知識フォローを強制するシステム
+\end{itemize}
+ない．
+
+これから，Blogの作成，公開のみならず，ペアの活動や欠席者の遅れを
+フォローするシステムを考案する．
+現在，西谷研究室ではゼミを中心とした，個別の時間調整を行っている．
+しかし，１週間学校に来れない人もいるため，それを援助すべく遠隔でもペアプロや知識の共有をするため，Skypeを用いる．
+また，構成員は教授者と学習者の両方に成り得るものとし，欠席者は
+ゼミ出席者を教授者としゼミの内容や課題を教えてもらう学習者とする．
+課題に取り組むとともに，Blogを作成し，知識定着をはかる．
+また，達成後は教授者が学習者にスタンプを押す．
+そのスタンプが，課題達成の証明となり，卒業するまでの必須
+過程とする．
+また，ゼミ欠席者でも教授者にスタンプを押してもらうと，教授者としての資格を獲得し，他の欠席者に教える事ができ，課題達成後はスタンプを押す．
+
+
 \subsection{新しい徒弟制と古い徒弟制，西谷研でどうするよ？}
-\label{sec:orgd062f9d}
+\label{sec:org5baf9db}
 \begin{itemize}
 \item このような参加型の学習を西谷研で実践するのに何が必要か？
 \item 徒弟制の本質
@@ -330,7 +402,7 @@ PMを理解した生徒，
 学べる人はどこでも学べる？
 
 \subsection{[o] 日報}
-\label{sec:org02968e8}
+\label{sec:org946a0ec}
 \begin{itemize}
 \item 自分がやったことの記録
 \item blogはそのつもり
@@ -341,7 +413,7 @@ PMを理解した生徒，
 \end{itemize}
 
 \subsection{[o] ペアプロ}
-\label{sec:org19378a4}
+\label{sec:orgf894188}
 \begin{itemize}
 \item ゼミ?　テキスト?
 \item 徒弟制と大学，スキルと記述的記憶の違い
@@ -369,7 +441,7 @@ Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p.133.
 \item 予定の強制，スタンプ集め
 \end{itemize}
 \subsection{[o] スタンプ集め}
-\label{sec:org005b5ed}
+\label{sec:orgda9ba25}
 例えば
 \begin{itemize}
 \item 全員jekyllを入れて，blogを晒す
@@ -388,7 +460,7 @@ Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p.133.
 また，不明瞭な点のあぶり出しが可能になる．
 
 \subsection{[o] org-mode = 便利なmark down}
-\label{sec:orga9b7b2a}
+\label{sec:orgdb0f71f}
 org-modeは，Emacs上で動作するアウトライナーであり
 プレーンテキストの文書作成環境である．
 ノートの保存，TODOリストの管理，スケジュールや時間の管理，
@@ -399,13 +471,10 @@ org-modeは，Emacs上で動作するアウトライナーであり
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
 \subsection{[o] my\_help == 直交補空間}
-\label{sec:orgcec17ac}
+\label{sec:org9a2f38a}
 ファイル構造において，メモやレポートが増えれば増えるほどchunkingする．
 chunkingすることにより，構造が深くなる．その結果，レポートやメモの場所
 が把握できなくる．
-my\_helpは，直交補空間を実現した知識構築を補助するツールである．
-ディレクトリに拘束される事なく，メモやレポートを作成できる利点があるため，
-どこからでもアクセスできる．
 
 directoryってのは知識のマップ．
 知識が大きくなると，chunkingする．
@@ -415,7 +484,7 @@ my\_helpってのは直交補空間に置かれている．
 いつでもaccessできて便利．
 
 \subsection{[o] jekyll == 晒すと何がいい？}
-\label{sec:orgc293f4d}
+\label{sec:orgac6c24a}
 jekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
 今回の文書の公開をjekyllで行う．
@@ -437,9 +506,9 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
 \end{itemize}
 
 \section{ornbの仕様}
-\label{sec:org2b42e2c}
+\label{sec:org3d99273}
 \subsection{スタンプ集め}
-\label{sec:org0b1335b}
+\label{sec:org0d33fba}
 例えば
 \begin{itemize}
 \item 全員jekyllを入れて，blogを晒す
@@ -458,12 +527,12 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
 また，不明瞭な点のあぶり出しが可能になる．
 
 \subsection{レポートの作成と公開}
-\label{sec:org3a0ed0f}
-まずはじめにレポート作成から公開までの流れは図\ref{fig:org4619c31}のようになる．
+\label{sec:orgfcdf537}
+まずはじめにレポート作成から公開までの流れは図\ref{fig:org3f74bcd}のようになる．
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=8cm]{./images/myhelp_to_jekyll.png}
-\caption{\label{fig:org4619c31}
+\caption{\label{fig:org3f74bcd}
 レポート作成から公開までの流れ}
 \end{figure}
 
@@ -497,11 +566,11 @@ my_help edit blog
 \end{quote}
 
 編集画面では，タイトルをつけた後，タイトルの横に
-図\ref{fig:org81ed109}のような日付を付けることとする．
+図\ref{fig:org564216f}のような日付を付けることとする．
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=8cm]{./images/add_date.png}
-\caption{\label{fig:org81ed109}
+\caption{\label{fig:org564216f}
 日付を付ける例}
 \end{figure}
 
@@ -515,7 +584,7 @@ Control-u Control-c .
 あとは，Blogの内容を書き込んでいく．
 
 \subsection{Jekyllのインストールと実行}
-\label{sec:org515e105}
+\label{sec:orgd3bb780}
 Blogの作成と公開はJekyllとGithub Pagesを用いる．
 以下にその手順を記述する．
 \href{https://qiita.com/daddygongon/items/9b7182db29861744fc79}{jekyllのinstallとGitHub Pagesとの連携}
