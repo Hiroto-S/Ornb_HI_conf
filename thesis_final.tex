@@ -16,7 +16,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\author{\texttt{S}}
+\author{bob}
 \date{}
 %和文タイトル
 \jtitle{知識構築システムornbを利用した学習過程の考察}
@@ -38,7 +38,7 @@ Shigeto R. Nishitani\addtocounter{footnote}{-1}\footnotemark
 }
 
 \hypersetup{
- pdfauthor={\texttt{S}},
+ pdfauthor={bob},
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
@@ -48,7 +48,7 @@ Shigeto R. Nishitani\addtocounter{footnote}{-1}\footnotemark
 
 
 \begin{abstract}
-\label{sec:orgc0433c4}
+\label{sec:orgc3fff19}
 At graduate research, 
 although the process is more important than the results,
 most students don't notice it.
@@ -63,6 +63,7 @@ noticing importance of learning process,
 ornb, whose specifications and 
 the connections to a static web system, jekyll,
 
+
 \end{abstract}
 
 \begin{keyword}
@@ -72,52 +73,36 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 \maketitle
 \section{Introduction}
 
-\label{sec:orgad06064}
+\label{sec:orgd0fe107}
 \subsection{背景I - 大学の学び}
-\label{sec:orga8b2152}
-今日の大学教育は，フンボルト理念を基礎としている．その通説を
+\label{sec:org6375fd6}
+卒業研究などのゼミナールは，フンボルト理念を基礎としている．その通説を潮木は次のようにまとめている．
 \begin{quote}
-近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
+近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。- アルカディア学報（教育学術新聞掲載コラム）,No.246
 \end{quote}
-と潮木はまとめている．
-\begin{itemize}
-\item アルカディア学報（教育学術新聞掲載コラム）,No.246
-\end{itemize}
-この後，潮木はその著書でフンボルト理念が単なる「神話だった」と力説している．
+と. また，「大学が伝えるべきことは，
+いかにして新たな知識を発見するか，いかにして知識を進歩させるか，
+そのための技法である」との観点から，「研究する学生」
+を志向したとしている．
 
-日本の工学を中心とする学部においては，
-研究至上主義としてのフンボルト理念が，
-大規模講義形式の授業への出席，
-レポートや期末試験を経て単位を取得する仕組みに繋がっている．
-
-しかし，学生は，意欲的に授業に参加し，
-自らが参加者となり授業に出席することで，
-知識を得ようとする姿勢が見受けられない．
-「単位さえあればいい」あるいは「卒業して就職さえできればいい」という
-本音と，「眠い」という実感によって，
-大学で授かるべき知識について魅力を感じなくなっている．
-あるいは社会に出て，すぐに実用できるスキル
-実用できるスキルの習得，例えば，英会話や論文作成術を
-身につけようとする．
-
-したがって，授業の内容の重要性に気づくことなく，
-レポートや期末試験の前にレジュメを確認しその内容を提出する．
-つまり，内容や過程を重要視せず，結果のみを重要としている．
-
-つまり，現在学生の知識習得に役立つと思って課されている
-レポートや試験は，
-結果のみを求めているという誤ったメッセージとして，
+今日の学生が，このような深遠な思想を理解して，
+長い受動的学習の最終段階として，ゼミナールに参加している様子は
+見受けられない．
+研究のための予備知識の習得に役立つと思って課されている
+レポートや試験などは，
+新しい発見につながる途中経過を求めているにもかかわらす，
+既存の知識の暗記という結果のみを求めているという誤ったメッセージとして，
 学生が受け取っている可能性がある．
+早い段階で実践的な課題を，project based learningや
+active learningとして取り入れる試みがなされているが，
+かける時間の割に，成果をあげるのが難しいとされている．
 
-\subsection{背景II - 大学生は徒弟制を否定しがち}
-\label{sec:org02ac0ec}
-ところが，
-最新の教育を行うと看板を掲げている大学に通う今日の学生は，
+最新の「教育」を行うと看板を掲げている大学に通う今日の学生は，
 大学は研究の場であるという認識が薄く，
 卒業研究や，研究室におけるゼミへの参加に
-どのようなスタンスで取り組めがいいか
-明確には理解できない．
-ある意味，学生には，研究室とは，
+どのようなスタンスで取り組めがいいか明確には理解できない．
+
+学生には，研究室とは，
 「大学システムが切り捨てようとして来た，徒弟制的な制度である」
 ということは全く脳裏にない．
 \begin{quote}
@@ -133,7 +118,7 @@ LaveWenger[p.41]
 これが，徒弟制に対する一般的な意識であり，大学生の多くもそのように認識していると考えられる．
 
 \subsection{目的}
-\label{sec:org0923809}
+\label{sec:org0c6a7ac}
 次節で示す通り，このような旧態然とした徒弟制も現代的な視点で
 見直しが進められている．
 本プロジェクトで提供しようとするシステムは，
@@ -151,9 +136,9 @@ LaveWenger[p.41]
 必要となる仕様を列挙し，それに基づいた実装デザインを示す．
 
 \section{徒弟制の見直し}
-\label{sec:org8d66141}
+\label{sec:org516a40d}
 \subsection{状況に埋め込まれた学習}
-\label{sec:org89a80b0}
+\label{sec:orga3e250e}
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
   という学習形態・概念が提案された．
@@ -188,19 +173,22 @@ LaveWenger[pp.8-9]
 と記している．
 
 \subsection{AM/PM}
-\label{sec:org3bf5853}
+\label{sec:org7c7c4c1}
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
-学習者，教授者，研究者のあり方について
-AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けた．
+学習者，教授者，研究者の知識に対する心持ちを
+AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した．
+表\ref{tab:org8fffae7}に示した通り，
 学習に対する従来の考え方であるAMは，個人が知識を習得することを目標とし，
-「学習」とは何かを獲得することであった．また，「知る」は個人が所有するものであると
-していた．一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，「学習」とは参加者となることである．学習者は，徒弟であり，教授者は，有識の参加者と定義した．
-つまり，個人ではなく，教授者，学習者がチームとして，また徒弟制を築くことでお互いお互いの知識構築が捗る仕組みとなっている．
-
-表\ref{tab:orgdde65b1}
+「学習」とは何かを獲得することであった．
+また，「知る」とは個人が所有するものであるとしていた．
+一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，
+「学習」とは参加者となることである．
+学習者は，徒弟であり，教授者は，有識の参加者と定義した．
+つまり，個人ではなく，教授者，学習者がチームとして，
+また徒弟制を築くことでお互いの知識構築がはかどる仕組みとなっている
 
 \begin{table*}[bt]
-\caption{\label{tab:orgdde65b1}
+\caption{\label{tab:org8fffae7}
 Acquisition metaphorとParticipation metaphorの比較．}
 \centering
 \begin{tabular}{lll}
@@ -218,11 +206,11 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 \end{table*}
 
 \subsection{PMの実践例と学生の受け止め方}
-\label{sec:orga4eed65}
+\label{sec:org783a658}
 \subsubsection{ペア評価の意図}
-\label{sec:org1ad99ee}
+\label{sec:org05d030c}
 関西学院大学理工学部・情報科学科で
-西谷が参加型学習の試みとして
+西谷がPM,参加型学習の実践としての試みに，
 数式処理演習という3年生向けの演習がある．
 学生は好きなもの同士がペアを組み，
 授業中課題や期末試験をペアで受け，
@@ -234,27 +222,10 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 その結果，互いに高め合い，知識の定着につながる．
 「共同体の構築」，「参加する」
 というPMの実践を意図している．
-しかし，実際には知識の定着に至らない学生が
-多数いる．
+しかし，実際には知識の定着に至らない学生が多数いる．
 \subsubsection{学生の見え方}
-\label{sec:orgb48ec7c}
-教育の非対称性，
-\begin{itemize}
-\item 教える側はどう役にたつかを知っているが，
-\item 教わる側は，知識を獲得するまでわからない．
-\end{itemize}
-：ダンス：
-京大アメフトの水野監督：運動神経がない人に教えるときは，喋れ．
-体で覚えるのは，偶然の失敗．
-
-\begin{itemize}
-\item サボりたい
-\item どこで役にたつかわからない
-\item 役に立たない
-\end{itemize}
-数学，英語全てやくに立たない．
-ならば，単位取得で縛りましょう．
-
+\label{sec:org5fe080c}
+なぜ，
 \begin{itemize}
 \item 一つ目の要因はペアによる演習のため，
 一人が作業すれば課題をクリアできる点である．
@@ -281,210 +252,76 @@ PMといった考え方を気づかせる授業ではなく
 学生にとって，「授業に出なくても良い楽に単位を取れる授業」
 という風に見受けられた．
 
-また，
 個人での学習よりも互いに高め合い，
 知識・スキルを習得するといったペアは一部であり，
-PMを理解した生徒，
-優秀である生徒とそうでない生徒がペアを組んだ場合，
+優秀な生徒と，そうでない生徒がペアを組んだ場合，
 前者がほとんどの課題をこなし，
 後者はほとんど考えないというパターンも存在した．
 
-\begin{itemize}
-\item 参加型学習の実践の失敗，
-\item 何が悪いかを分析
-\end{itemize}
+PMを理解して，共同体を作ろうとまで考える生徒はいたんだろうか？
 
-
-\section{卒論・ゼミ}
-\label{sec:orge1b361a}
-前提条件として，西谷けんにきた学生は
+教育の非対称性，
 \begin{itemize}
+\item 教える側はどう役にたつかを知っているが，
+\item 教わる側は，知識を獲得するまでわからない．
+
 \item サボりたい
 \item どこで役にたつかわからない
 \item 役に立たない
 \end{itemize}
-としようよ．
-
-それでも，西谷研に参加したいと思わすには，どうすればいい？
-
-\begin{itemize}
-\item やりたいことを聞いて，それをさせる
-\end{itemize}
-ではない．
-
-どうすればいい？？，
-\begin{itemize}
-\item 自信が持てるような活動
-\item そういうことをしているということに気づいてもらう？
-\item codingができるようになってきているから．
-\item 実感させるシステム？
-\item 周りに反応してもらう，
-\end{itemize}
-
-知識，反応，行動が「強化される」．
-
-
-客観的な事実の記述
-\begin{itemize}
-\item merit見えない, demerit時間が取られる
-\item 西谷研究室では，生徒の出席率が悪い．
-これの原因は，他人任せであることが一番大きい．
-「誰かが出席していれば，なんとかしてくれる」，
-「欠席による出席者より理解が遅れるという危機感の無さ」，
-「プライベートとゼミとの優先順位がおかしい」
-等が挙げられる．
-
-卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
-プログラミング，レポートの書き方を教える．
-この時，後輩は自らの意思で参加するという考え方であるべきだ．
-西谷研究室では，後輩が参加者となり先輩から学ぶという風潮が見受けられない．
-後輩は，卒業研究を発表すること，
-結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
-\end{itemize}
+数学，英語全てやくに立たない．
+ならば，単位取得で縛りましょう．
+となるが，それでは古いタイプの徒弟制となんら変わりはない．
+どうすれば，役に立つことに気づくのか．．．
 
 \section{構築システムのアイデア}
-\label{sec:orgae21a63}
-以上の考察に従って，
-研究室運用システムとして
+\label{sec:org752686a}
+新しい徒弟制という視点に立って，研究室運用システムとして
 \begin{itemize}
-\item 日々の個人活動を構成員に公開する
-\item ペアによる個別指導
-\item 欠席者のフォロー
+\item 日々の個人活動を構成員に公開する(blogシステム)
+\item ペアによる個別指導(遠隔ペアプロ)
+\item 欠席者のフォロー(スタンプ集め)
 \end{itemize}
-を提供することを当初の目標とした．
+という機能提供することを当初の目標とした．
 
-\subsection{これらを運用するために}
-\label{sec:orgf130331}
+\subsection{blogシステム}
+\label{sec:org2907fae}
+ゼミ活動しているかどうかはなんらかの方法で記録する必要がある．
+毎日ゼミにくる学生は何かしているのがわかるし，
+あるいは細かく指導することが可能であるが，
+毎日来れない学生にはメールなどで指導することが普通であろう．
+しかし，今時の学生は，自ら問い合わせを行うことをしない．
+そこで，これを自動化する必要がある．
+
+これらを
 \begin{itemize}
-\item まず初めに，レポートを作成し，日々の個人活動を構成員に公開する方法として，my\_help,Jekyll,GitHub Pagesを用いたシステムを開発した．
-my\_helpはRubygemsで提供されている，
-直交補空間を実現した知識構築を補助するツールである．
+\item my\_help
+\item org-mode
+\item jekyll
+\end{itemize}
+のそれぞれの機能を利用して実装した．
+レポート作成から公開までの流れは図\ref{fig:orgaf5a885}のようになる．
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=8cm]{./images/myhelp_to_jekyll.png}
+\caption{\label{fig:orgaf5a885}
+レポート作成から公開までの流れ}
+\end{figure}
+
+\subsubsection{my\_help = 直交補空間}
+\label{sec:org934235a}
+my\_helpはRubygemsで提供されている,
+ファイル構造において，メモやレポートが増えればchunkingの必要が出てくる．
+ところが，chunkingすることにより，ディレクトリ構造が深くなる．
+その結果，レポートやメモの場所が把握できなくなる．
+これに対して，my\_helpは直交補空間を実現した知識構築を補助するツールである．
 ディレクトリに拘束される事なく，
 メモやレポートを作成・管理できるという利点があるため，
 どこからでもアクセスできる．
 my\_helpではBlogという形で文書を作成し，構成員に日報を伝える．
 
-my\_helpでBlogはorg-modeで作成されるが，JekyllではMarkdownがBlog
-記事となるため，orgファイルをmdファイルに変換し，Jekyllで公開する記事
-次に，my\_helpで作成されたBlogをJekyllとGitHub Pagesを用いて公開する．
-Jekyllは，Rubygemsで提供される静的サイトジェネレーターである．
-また，GitHub Pagesと連携し公に公開する．
-\end{itemize}
-
-
-\subsection{デザイン（つもり）}
-\label{sec:org7f28c3d}
-\begin{itemize}
-\item ペアの活動がスムーズに進むように環境を提供する．
-\end{itemize}
-今は，ゼミを中心とした個別の時間調整で行っている．
-遠隔でも実践できるようなシステム．
-\begin{itemize}
-\item 欠席者の知識フォローを強制するシステム
-\end{itemize}
-ない．
-
-これから，Blogの作成，公開のみならず，ペアの活動や欠席者の遅れを
-フォローするシステムを考案する．
-現在，西谷研究室ではゼミを中心とした，個別の時間調整を行っている．
-しかし，１週間学校に来れない人もいるため，それを援助すべく遠隔でもペアプロや知識の共有をするため，Skypeを用いる．
-また，構成員は教授者と学習者の両方に成り得るものとし，欠席者は
-ゼミ出席者を教授者としゼミの内容や課題を教えてもらう学習者とする．
-課題に取り組むとともに，Blogを作成し，知識定着をはかる．
-また，達成後は教授者が学習者にスタンプを押す．
-そのスタンプが，課題達成の証明となり，卒業するまでの必須
-過程とする．
-また，ゼミ欠席者でも教授者にスタンプを押してもらうと，教授者としての資格を獲得し，他の欠席者に教える事ができ，課題達成後はスタンプを押す．
-
-
-\subsection{新しい徒弟制と古い徒弟制，西谷研でどうするよ？}
-\label{sec:org5baf9db}
-\begin{itemize}
-\item このような参加型の学習を西谷研で実践するのに何が必要か？
-\item 徒弟制の本質
-\item 親方と徒弟の関係
-\begin{itemize}
-\item 古いよね
-\item 見習い？
-\item 習慣
-\end{itemize}
-\item 先輩の仕事
-\item 硬い上下関係ではなく，参加して学ぶ
-\item 徒弟のモチベーション，参加意欲
-\item 教える方も，確固とした知識として身につけることができる
-\item 今まで何で，教えなかった
-\item ダンスはあるけど，
-\item 後輩と勉強する機会がない
-\item そういう機会がないから
-\item 優先順位がおかしい
-\item 共同体への参加というのを気づいていなかった．
-\item 同じやろ
-\item 声かけ
-\item 目に見える形にして共有する
-\end{itemize}
-
-学べる人はどこでも学べる？
-
-\subsection{[o] 日報}
-\label{sec:org946a0ec}
-\begin{itemize}
-\item 自分がやったことの記録
-\item blogはそのつもり
-\item 見た目って大事
-\item 手軽にできる
-\item org
-\item my\_help
-\end{itemize}
-
-\subsection{[o] ペアプロ}
-\label{sec:orgf894188}
-\begin{itemize}
-\item ゼミ?　テキスト?
-\item 徒弟制と大学，スキルと記述的記憶の違い
-\item スキルの伝達をチェックする？
-\item free riderが増える
-\item コピペはダメ！
-\item ペアでの作業
-\item ペア評価
-\item 責任，サボれない
-\end{itemize}
-
-\begin{quote}
-ただ始めること．これがたぶん生産性の鍵なのだ.
-ペアプロが機能する理由は，「相方とペアプロ作業を予定する」ことで，
-「作業を始めることをお互いが強制する」からに違いない
-(原文より訳出).
-Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p.133.
-\end{quote}
-
-\begin{itemize}
-\item チェックにならない．
-\item だから，skypeとかが必要．
-
-\item scheduling
-\item 予定の強制，スタンプ集め
-\end{itemize}
-\subsection{[o] スタンプ集め}
-\label{sec:orgda9ba25}
-例えば
-\begin{itemize}
-\item 全員jekyllを入れて，blogを晒す
-\end{itemize}
-というゼミで実行した課題があるとする．そいつを全員が実行したかどうかを，教えた方がチェックする．
-手順は以下の通り，
-\begin{itemize}
-\item 欠席者が出席者に聞く
-\item 出席者がスタンプを押す
-\item それが埋まってなかったら卒業なし．
-\end{itemize}
-これを自動化するシステム．
-
-いっぺん聞いたら他の人に教えるのはあり．
-そうすると，教えることによる記憶強化の可能性が高まる．
-また，不明瞭な点のあぶり出しが可能になる．
-
-\subsection{[o] org-mode = 便利なmark down}
-\label{sec:orgdb0f71f}
+\subsubsection{org-mode = 便利なmark down}
+\label{sec:org7602308}
 org-modeは，Emacs上で動作するアウトライナーであり
 プレーンテキストの文書作成環境である．
 ノートの保存，TODOリストの管理，スケジュールや時間の管理，
@@ -494,50 +331,69 @@ org-modeは，Emacs上で動作するアウトライナーであり
 機能も兼ね備えている.
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
-\subsection{[o] my\_help == 直交補空間}
-\label{sec:org9a2f38a}
-ファイル構造において，メモやレポートが増えれば増えるほどchunkingする．
-chunkingすることにより，構造が深くなる．その結果，レポートやメモの場所
-が把握できなくる．
-
-directoryってのは知識のマップ．
-知識が大きくなると，chunkingする．
-深くなる．
-迷子になる．
-my\_helpってのは直交補空間に置かれている．
-いつでもaccessできて便利．
-
-\subsection{[o] jekyll == 晒すと何がいい？}
-\label{sec:orgac6c24a}
+\subsubsection{jekyll = 晒すと何がいい？}
+\label{sec:orgc3e7d34}
+my\_helpはemacsのorg-modeを利用しているが，個人での使用を
+前提としており，公開するためのシステムが存在しない．
 jekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
-今回の文書の公開をjekyllで行う．
-\begin{itemize}
-\item 文章，文を気にする，
-\item 共有しやすい，
-\item 形になる，
-\begin{itemize}
-\item report
-\item 他人事だと思っているから
-\item 自分が学んでいることとの関連性を自覚する
-\item 深く理解する
-\item 経験知識に変える，説明する，議論する
-\begin{itemize}
-\item 徒弟制ではない，大学システム
-手に職を，中世のシステム
-\end{itemize}
-\end{itemize}
-\end{itemize}
 
-\section{ornbの仕様}
-\label{sec:org3d99273}
+次に，my\_helpで作成されたBlogをJekyllとGitHub Pagesを用いて公開する．
+Jekyllは，Rubygemsで提供される静的サイトジェネレーターである．
+また，GitHub Pagesと連携し公に公開する．
+
+\subsection{遠隔ペアプロ}
+\label{sec:org83edeba}
+ペアの活動や欠席者の遅れをフォローするシステムを考案する．
+現在，西谷研究室ではゼミを中心とした，個別の時間調整を行っている．
+しかし，１週間学校に来れない人もいるため，
+それを援助すべく遠隔でもペアプロや知識の共有をする.
+ペアプロが機能する理由は，
+\begin{quote}
+ただ始めること．これがたぶん生産性の鍵なのだ.
+ペアプロが機能する理由は，「相方とペアプロ作業を予定する」ことで，
+「作業を始めることをお互いが強制する」からに違いない
+(原文より訳出).
+Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p.133.
+\end{quote}
+であるとされており，空間を共有する必要はない．
+
+キャンパスが郊外にあるため，効率的にゼミナールの研究を進めるためには，
+遠隔での共同作業が不可欠である．そこで，いくつかの環境を使って
+実際の作業を試行して，結果を収集する．
+
+そのような環境で必要となる仕様は，新しいタイプの徒弟制の視点に立って，
+\begin{enumerate}
+\item 先輩と後輩によるペアプロ
+\item コードのリアルタイム共有
+\item 音声，ポインタなどによる指示
+\item 作業記録，振り返り
+\end{enumerate}
+などが効率的に行えることである．
+
 \subsection{スタンプ集め}
-\label{sec:org0d33fba}
+\label{sec:orgd2ffb9c}
+また，構成員は教授者と学習者の両方に成り得るものとし，欠席者は
+ゼミ出席者を教授者としゼミの内容や課題を教えてもらう学習者とする．
+
+学習者は，教授者に教えてもらいながら，
+課題に取り組むとともに，Blogを作成し，知識定着をはかる．
+課題達成後は教授者が学習者にスタンプを押す．
+そのスタンプが，課題達成の証明となり，卒業するまでの必須
+過程とする．
+また，ゼミ欠席者でも教授者にスタンプを押してもらうと，
+教授者としての資格を獲得し，
+他の欠席者に教える事ができ，課題達成後はスタンプを押す．
+
+ゼミ毎にスタンプを用意し，全てのスタンプの取得が卒業の必須項目とする．
+
 例えば
 \begin{itemize}
 \item 全員jekyllを入れて，blogを晒す
 \end{itemize}
-というゼミで実行した課題があるとする．そいつを全員が実行したかどうかを，教えた方がチェックする．
+というゼミで実行した課題があるとする．
+そいつを全員が実行したかどうかを，教えた方がチェックする．
+
 手順は以下の通り，
 \begin{itemize}
 \item 欠席者が出席者に聞く
@@ -549,83 +405,4 @@ jekyllはRubygemsで提供されている静的サイトジェネレーターで
 いっぺん聞いたら他の人に教えるのはあり．
 そうすると，教えることによる記憶強化の可能性が高まる．
 また，不明瞭な点のあぶり出しが可能になる．
-
-\subsection{レポートの作成と公開}
-\label{sec:orgfcdf537}
-まずはじめにレポート作成から公開までの流れは図\ref{fig:org3f74bcd}のようになる．
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=8cm]{./images/myhelp_to_jekyll.png}
-\caption{\label{fig:org3f74bcd}
-レポート作成から公開までの流れ}
-\end{figure}
-
-
-次に，レポートの作成について述べる．
-レポートの作成はRubygemseで提供されている,
-my\_helpを用いる．
-
-my\_helpを以下の方法でインストールする．
-\begin{quote}
-\begin{verbatim}
-gem install my_help
-\end{verbatim}
-\end{quote}
-
-次に，my\_helpにblogというlistを作成するために，
-以下のコマンドを実行する．
-
-\begin{quote}
-\begin{verbatim}
-my_help new blog
-\end{verbatim}
-\end{quote}
-
-これで新しいlistが作成される．
-次にblogの内容を編集するため，以下を実行する．
-\begin{quote}
-\begin{verbatim}
-my_help edit blog
-\end{verbatim}
-\end{quote}
-
-編集画面では，タイトルをつけた後，タイトルの横に
-図\ref{fig:org564216f}のような日付を付けることとする．
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=8cm]{./images/add_date.png}
-\caption{\label{fig:org564216f}
-日付を付ける例}
-\end{figure}
-
-また，以下のコマンドで日付を付ける事が出来る．
-\begin{quote}
-\begin{verbatim}
-Control-u Control-c .
-\end{verbatim}
-\end{quote}
-
-あとは，Blogの内容を書き込んでいく．
-
-\subsection{Jekyllのインストールと実行}
-\label{sec:orgd3bb780}
-Blogの作成と公開はJekyllとGithub Pagesを用いる．
-以下にその手順を記述する．
-\href{https://qiita.com/daddygongon/items/9b7182db29861744fc79}{jekyllのinstallとGitHub Pagesとの連携}
-
-はじめに，Jekyllをインストールする．
-\begin{quote}
-\begin{verbatim}
-gem install bundler jekyll
-\end{verbatim}
-\end{quote}
-
-次にローカルサーバを立ち上げる.
-\begin{quote}
-\begin{verbatim}
-jekyll new my-awesome-site
-cd my-awesome-site
-bundle exec jekyll serve
-\end{verbatim}
-\end{quote}
 \end{document}
