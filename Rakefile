@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 file = 'thesis'
+KEY_WORD_FOR_HEAD1 = '\title{}' # '\auth{bob}'
 
 $head0 = <<'EOS'
 \documentclass{hissymp}
@@ -65,7 +66,8 @@ def convert_thesis(lines)
   end
 
   new_line.each do |line|
-    line.gsub!('\author{bob}', $head1)
+
+    line.gsub!(KEY_WORD_FOR_HEAD1, $head1)
     line.gsub!('\section{abstract}','\begin{abstract}')
     line.gsub!('\section{Introduction}', $head2)
     line.gsub!('{table}', '{table*}')
