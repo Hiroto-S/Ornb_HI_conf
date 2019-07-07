@@ -19,6 +19,7 @@
   ornb, whose specifications and 
   the connections to a static web system, jekyll,
 
+
 * Introduction
 ** 背景I - 大学の学び
 今日の大学教育は，フンボルト理念を基礎としている．その通説を
