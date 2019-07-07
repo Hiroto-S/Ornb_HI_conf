@@ -1,5 +1,7 @@
-\documentclass{hissymp}
-\usepackage[dvipdfmx]{graphicx}
+% Intended LaTeX compiler: pdflatex
+
+  \documentclass[a4,p11]{article}
+  \usepackage[dvipdfmx]{graphicx}
   \usepackage[utf8]{inputenc}
   \usepackage[T1]{fontenc}
   
@@ -18,25 +20,7 @@
 \usepackage{hyperref}
 \author{bob}
 \date{}
-%和文タイトル
-\jtitle{知識構築システムornbを利用した学習過程の考察}
-%著者日本名
-\jauthor{
-河野大登\thanks{関西学院大学大学院　理工学研究科}　　
-福森聡\thanks{関西学院大学　理工学部}　　
-西谷滋人\addtocounter{footnote}{-1}\footnotemark
-}
-
-%英文タイトル
-\etitle{hoge hoge}
-
-%著者英文名
-\eauthor{
-Kono Hiroto\thanks{Graduate school of Science and Technology, Kwansei Gakuin Univ.},　
-Satoshi Fukumori\thanks{Department of Informatics, Kwansei Gakuin Univ. }　and
-Shigeto R. Nishitani\addtocounter{footnote}{-1}\footnotemark
-}
-
+\title{}
 \hypersetup{
  pdfauthor={bob},
  pdftitle={},
@@ -47,8 +31,8 @@ Shigeto R. Nishitani\addtocounter{footnote}{-1}\footnotemark
 \begin{document}
 
 
-\begin{abstract}
-\label{sec:orgd2f022c}
+\section{abstract}
+\label{sec:org2b36e2c}
 At graduate research, 
 although the process is more important than the results,
 most students don't notice it.
@@ -64,18 +48,10 @@ ornb, whose specifications and
 the connections to a static web system, jekyll,
 
 
-\end{abstract}
-
-\begin{keyword}
-keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
-\end{keyword}
-
-\maketitle
 \section{Introduction}
-
-\label{sec:org3fafc48}
-\subsection{ゼミナール}
-\label{sec:orgd8b3bc5}
+\label{sec:orgb6801ff}
+\subsection{背景I - 大学の学び}
+\label{sec:orged60b1f}
 卒業研究などのゼミナール(以下、ゼミ)は，フンボルト理念を基礎としている．その通説を潮木は次のようにまとめている．
 \begin{quote}
 近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。- アルカディア学報（教育学術新聞掲載コラム）,No.246
@@ -86,28 +62,39 @@ keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
 を志向したとしている．
 
 今日の学生が，このような深遠な思想を理解して，
-長い受動的学習の最終段階として，ゼミに参加している気概は
-感じられない．
+長い受動的学習の最終段階として，ゼミに参加している様子は
+見受けられない．
 また、最新の「教育」を行うと看板を掲げている大学に通う今日の学生は，
-大学は研究の場であるという認識はなく，
+大学は研究の場であるという認識が薄く，
 卒業研究や，研究室におけるゼミへの参加に
-どのようなスタンスで取り組むべきか迷っている．
-研究のための予備知識，スキルの習得に役立つとして課されている
+どのようなスタンスで取り組むべきか明確には理解できない．
+そのため、研究のための予備知識の習得に役立つとされ課されている
 レポートや試験などは，
-新しい発見につながる途中経過を求めているにもかかわらす，
-既存の知識の暗記という結果のみを求めているという誤ったメッセージとして受け取られている可能性がある．
+新しい発見につながる途中経過にを求めているにもかかわらす，
+既存の知識の暗記という結果のみを求めているという誤ったメッセージとして，
+学生に受け取られている可能性がある．
 実践的な課題を，project based learning[Bell, 2010]や
 active learning[Settles, 2009]として取り入れる試みがなされている[溝上慎一, 2007]が，
 かける時間の割に，成果をあげるのが難しいとされている．
 
-「研究する学生」を育てるには，個人に適合した指導が欠かせない．
-これはある意味，メンターとメンティ，あるいは
-マスターとパダワンのような関係となる．
-しかし，ゼミナールへやってくる学生は，
-研究指導が徒弟制的な制度であるとは全く予想していない．
+学生には，研究室とは，
+「大学システムが切り捨てようとして来た，徒弟制的な制度である」
+ということは全く脳裏にない．
+\begin{quote}
+1989年にグロスハンスの指摘によれば，
+西ヨーロッパとほかでもない米国において
+
+中略
+
+徒弟制は最も価値のある，
+しかも最も力のない労働者を統制するための伝統的な形態だと長い間みなされていた．
+LaveWenger[p.41]
+\end{quote}
+これが，徒弟制に対する一般的な意識であり，
+大学生の多くが大学での学習と徒弟制を結びつけることはないと考えられる．
 
 \subsection{目的}
-\label{sec:org280b74c}
+\label{sec:org61f3643}
 次節で示す通り，このような旧態然とした徒弟制も現代的な視点で
 見直しが進められている．
 本プロジェクトで提供しようとするシステムは，
@@ -125,9 +112,9 @@ active learning[Settles, 2009]として取り入れる試みがなされてい�
 必要となる仕様を列挙し，それに基づいた実装デザインを示す．
 
 \section{徒弟制の見直し}
-\label{sec:org3615d37}
+\label{sec:orgf4f482c}
 \subsection{状況に埋め込まれた学習}
-\label{sec:org55b4269}
+\label{sec:org8c87fa5}
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
   という学習形態・概念が提案された[福島真人, 1993]．
@@ -163,11 +150,11 @@ LaveWenger[pp.8-9]
 
 
 \subsection{AM/PM}
-\label{sec:org2f7fb33}
+\label{sec:orga2b152a}
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者の知識に対する心持ちを
 AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した．
-表\ref{tab:orgc5961f0}に示した通り，
+表\ref{tab:orge53c99f}に示した通り，
 学習に対する従来の考え方であるAMは，個人が知識を習得することを目標とし，
 「学習」とは何かを獲得することであった．
 また，「知る」とは個人が所有するものであるとしていた．
@@ -177,8 +164,8 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した
 つまり，個人ではなく，教授者，学習者が共同体（チーム）として，
 また徒弟制を築くことでお互いの知識構築がはかどる仕組みとなっている．
 
-\begin{table*}[bt]
-\caption{\label{tab:orgc5961f0}
+\begin{table}[bt]
+\caption{\label{tab:orge53c99f}
 Acquisition metaphorとParticipation metaphorの比較．}
 \centering
 \begin{tabular}{lll}
@@ -193,12 +180,12 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 持つ，所有する & 知るとは & 所属する，参加する，コミュニケーションをとる\\
 \hline
 \end{tabular}
-\end{table*}
+\end{table}
 
 \subsection{PMの実践例と学生の受け止め方}
-\label{sec:org3ba5fb7}
+\label{sec:org24e1b4b}
 \subsubsection{ペア評価の意図}
-\label{sec:org88a0800}
+\label{sec:org2ec1a84}
 関西学院大学理工学部・情報科学科で
 西谷が,PM,すなわち参加型学習の実践としての試みに，
 数式処理演習という3年生向けの演習を実践している．
@@ -214,7 +201,7 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 PMの実践を意図している．
 しかし，実際には知識の定着に至らない学生が多数いる．
 \subsubsection{学生の見え方}
-\label{sec:orgc2b5f8e}
+\label{sec:orgcdfe227}
 なぜ，
 \begin{itemize}
 \item 一つ目の要因はペアによる演習のため，
@@ -266,7 +253,7 @@ PMの実践を意図している．
 どうすれば，役に立つことに学生が気づくのか．
 
 \section{構築システムのアイデア}
-\label{sec:org3de8c4e}
+\label{sec:orga818008}
 「新しい徒弟制」という視点に立って，研究室運用システムとして
 \begin{itemize}
 \item 日々の個人活動を構成員に公開する(blogシステム)
@@ -276,12 +263,12 @@ PMの実践を意図している．
 という機能提供することを当初の目標とした．
 
 \subsection{blogシステム}
-\label{sec:orgbd72b80}
+\label{sec:orga88773b}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./images/myhelp_to_jekyll.png}
-\caption{\label{fig:org97a2703}
+\caption{\label{fig:org5643fb8}
 blog作成から公開までの流れ.}
 \end{figure}
 
@@ -302,19 +289,18 @@ blog作成から公開までの流れ.}
 などを公開することで，codingがうまくいかなかったとしても，
 思考の過程を記録し，先輩や同僚のcode reviewを通じて，
 programming skillの向上が期待される．
-また会社においては，これは日報にも通じている．
 
-研究室内の活動においても実践可能なblogシステムを目指して，
+そこで，研究室内の活動においても実践可能なblogシステムを目指して，
 \begin{itemize}
 \item my\_help
 \item org-mode
 \item jekyll
 \end{itemize}
 のそれぞれの機能を利用して実装した．
-blogの作成から公開までの流れは図\ref{fig:org97a2703}のようになる．
+blogの作成から公開までの流れは図\ref{fig:org5643fb8}のようになる．
 
 \subsubsection{my\_help = 直交補空間}
-\label{sec:org36e4e91}
+\label{sec:orgee96707}
 my\_helpはRubygemsで提供されている,
 ファイル構造において，メモやレポートが増えればchunkingの必要が出てくる．
 ところが，chunkingすることにより，ディレクトリ構造が深くなる．
@@ -326,7 +312,7 @@ my\_helpはRubygemsで提供されている,
 my\_helpではBlogという形で文書を作成し，構成員に日報を伝える．
 
 \subsubsection{org-mode = 便利なmark down}
-\label{sec:org0d8d0c0}
+\label{sec:orgeeca0bb}
 org-modeは，Emacs上で動作するアウトライナーであり
 プレーンテキストの文書作成環境である．
 ノートの保存，TODOリストの管理，スケジュールや時間の管理，
@@ -337,26 +323,22 @@ org-modeは，Emacs上で動作するアウトライナーであり
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
 \subsubsection{jekyll = 晒すと何がいい？}
-\label{sec:org412297a}
+\label{sec:orgaf96f08}
 my\_helpはemacsのorg-modeを利用しているが，個人での使用を
 前提としており，公開するためのシステムが存在しない．
 jekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
-Githubには，Jekyllで作成されたサイトを公開する
-GitHub Pagesというサービスが用意されている．
 
-my\_helpで作成されたBlogを，Jekyllに連携することで，
-localにおいてその完成度を確認することができる．
-また，git pushするだけでgithub pagesでworld wideに公開される．
-
+次に，my\_helpで作成されたBlogをJekyllとGitHub Pagesを用いて公開する．
+Jekyllは，Rubygemsで提供される静的サイトジェネレーターである．
+また，GitHub Pagesと連携し公に公開する．
 
 \subsection{遠隔ペアプロ}
-\label{sec:orged89ac6}
-ペアの活動や欠席者の遅れをフォローするシステムを提供する．
-現在，ゼミを中心とした，個別の時間調整を行っている．
+\label{sec:org5ef62ba}
+ペアの活動や欠席者の遅れをフォローするシステムを考案する．
+現在，西谷研究室ではゼミを中心とした，個別の時間調整を行っている．
 しかし，１週間学校に来れない人もいるため，
 それを援助すべく遠隔でもペアプロや知識の共有をする.
-
 ペアプロが機能する理由は，
 \begin{quote}
 ただ始めること．これがたぶん生産性の鍵なのだ.
@@ -381,8 +363,7 @@ Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p.133.
 などが効率的に行えることである．
 
 \subsection{スタンプ集め}
-\label{sec:orgd581cf7}
-
+\label{sec:org073ac61}
 また，構成員は教授者と学習者の両方に成り得るものとし，欠席者は
 ゼミ出席者を教授者としゼミの内容や課題を教えてもらう学習者とする．
 
@@ -415,19 +396,4 @@ Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p.133.
 いっぺん聞いたら他の人に教えるのはあり．
 そうすると，教えることによる記憶強化の可能性が高まる．
 また，不明瞭な点のあぶり出しが可能になる．
-
-\section{今後の課題}
-\label{sec:org9966a70}
-
-\section{引用文献}
-\label{sec:org2b1d460}
-\begin{itemize}
-\item\relax [潮木] フンボルト理念，神話の崩壊
-\item\relax [溝上慎一, 2007]
-溝上慎一, アクティブ・ラーニング導入の実践的課題, 名古屋高等教育研究,第7号,pp.269--287（2007）
-\item\relax [Bell, 2010]
-S. Bell, ‘Project-Based Learning for the 21st Century: Skills for the Future’, The Clearing House: A Journal of Educational Strategies, Issues and Ideas, vol. 83, no. 2, pp. 39–43, Jan. 2010.
-\item\relax [Settles, 2009]
-B. Settles, ‘Active Learning Literature Survey’, University of Wisconsin-Madison Department of Computer Sciences, Technical Report, 2009.
-\end{itemize}
 \end{document}
