@@ -1,4 +1,4 @@
-% Intended LaTeX compiler: pdflatex
+`% Intended LaTeX compiler: pdflatex
 
   \documentclass[a4,p11]{article}
   \usepackage[dvipdfmx]{graphicx}
@@ -33,24 +33,26 @@
 
 
 \section{abstract}
-\label{sec:org94eb056}
-At graduate research,
-although the process is more important than the results,
-most students don't notice it.
-Because the apprenticeship is suitable to learn the process,
-the graduate reseach enforces a kind of
+\label{sec:orge469784}
+At graduate research，
+although the process is more important than the results，
+most students don't notice it．
+Because the guild system is nice to learn the process，
+the graduate reseach possesses a kind of
 relationship between
-a master and a padawan learner.
-On this project,
+a mentor and a padawan learner．
+
+On this project，
 we are developing a system for
-noticing importance of learning process,
-ornb, whose specifications and
-the cooperation to a static web system, Jekyll.
+noticing importance of learning process，
+ornb， whose specifications and
+the connections to a static web system， jekyll，
+
 
 \section{Introduction}
-\label{sec:orge985c0c}
+\label{sec:org552f734}
 \subsection{ゼミナール}
-\label{sec:org09ec250}
+\label{sec:org50956c1}
 卒業研究などのゼミナール(以下、ゼミ)は，フンボルト理念を基礎としているとされる．
 その通説を潮木は次のようにまとめている．
 \begin{quote}
@@ -71,7 +73,7 @@ the cooperation to a static web system, Jekyll.
 どのようなスタンスで取り組むべきか迷っている．
 研究のための予備知識，スキルの習得に役立つとして課されている
 レポートや試験などは，
-新しい発見につながる途中経過を求めているにもかかわらず，
+新しい発見につながる途中経過を求めているにもかかわらす，
 既存の知識の暗記という結果のみを求めているという誤ったメッセージとして受け取られている可能性がある．
 実践的な課題を，project based learning \cite{Bell}
 やactive learningとして取り入れる試みがなされているが，
@@ -81,14 +83,14 @@ the cooperation to a static web system, Jekyll.
 「研究する学生」を育てるには，個人に適合した指導が欠かせない．
 これはある意味，メンターとメンティ，あるいは
 マスターとパダワンのような関係となる．
-しかし，ゼミへやってくる学生は，
+しかし，ゼミナールへやってくる学生は，
 研究指導が徒弟制的な制度であるとは全く予想していない．
 
 \subsection{目的}
-\label{sec:org78868cd}
+\label{sec:org2767490}
 次節で示す通り，このような旧態然とした徒弟制も現代的な視点で
 見直しが進められている．
-本プロジェクトで提供しようとするシステムornbは，
+本プロジェクトで提供しようとするシステムは，
 \begin{itemize}
 \item 研究室は徒弟制
 \item 学生はそれを知らない
@@ -103,9 +105,9 @@ the cooperation to a static web system, Jekyll.
 必要となる仕様を洗い出し，それに基づいた実装デザインを示す．
 
 \section{徒弟制の見直し}
-\label{sec:org3e34ba8}
+\label{sec:org1558d3b}
 \subsection{状況に埋め込まれた学習}
-\label{sec:orgb72c6a4}
+\label{sec:org0b7df18}
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
   という学習形態・概念が提案された\cite{LaveWenger}.
@@ -141,25 +143,23 @@ the cooperation to a static web system, Jekyll.
 
 
 \subsection{AM/PM}
-\label{sec:org376e2bd}
-1998年数学者のSfardは，レイヴとウェンガーの考えを受け，
+\label{sec:org80c453c}
+1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者の知識に対する心持ちを
-AM(Acquisition Metaphor)とPM(Participation Metaphor)と
-名付けて分類した\cite{Sfard}．
-表\ref{tab:org02b241b}に示した通り，
+AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した\cite{Sfard}．
+表\ref{tab:org0645521}に示した通り，
 学習に対する従来の考え方であるAMは，個人が知識を習得することを目標とし，
 「学習」とは何かを獲得することであった．
 また，「知る」とは個人が所有するものであるとしていた．
 一方で学習に対する新しい考えであるPMは，学習の目標は共同体の構築であり，
 「学習」とは参加者となることである．
-
-本プロジェクトでは、学習者は，徒弟であり，教授者は，熟練した参加者と定義した．
-個人ではなく，教授者，学習者が共同体（チーム）として，
-また徒弟制を築くことでお互いの知識構築がはかどる仕組みを目指した．
+本プロジェクトでは、学習者は，徒弟であり，教授者は，有識の参加者と定義した．
+つまり，個人ではなく，教授者，学習者が共同体（チーム）として，
+また徒弟制を築くことでお互いの知識構築がはかどる仕組みとなっている．
 
 \begin{table}[bt]
-\caption{\label{tab:org02b241b}
-Acquisition metaphorとParticipation metaphorの比較\cite[Table Iを和訳]{Sfard}．}
+\caption{\label{tab:org0645521}
+Acquisition metaphorとParticipation metaphorの比較．}
 \centering
 \begin{tabular}{lll}
 \hline
@@ -168,7 +168,7 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 個人を豊かにする & 学習の目標 & 共同体の構築\\
 何かを獲得する & 学習するとは & 参加者となる\\
 受容者，再構築者 & 学習者 & 周辺参加者，徒弟\\
-供給者，促進者，仲裁人 & 教授者 & 熟練した参加者, 実践や論考の修得者\\
+供給者，促進者，仲裁人 & 教授者 & 有識の参加者\\
 資産，所有物，一般商品 & 知識，コンセプト & 実践，論考，活動の一側面\\
 持つ，所有する & 知るとは & 所属する，参加する，コミュニケーションをとる\\
 \hline
@@ -176,14 +176,13 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 \end{table}
 
 \subsection{PMの実践例と学生の受け止め方}
-\label{sec:org7f5882e}
+\label{sec:orgc86aac9}
 このような徒弟制の見直しは，単なる概念として語られるだけでなく，
 実践としてシステム化されつつある.
 イギリスの一部の大学では2015年にDegree Apprenticeshipsという
-徒弟制度を取り入れた実践的技能を身につける
-教育形態が開始されている\cite{DegreeApprenticeship}．
+徒弟制度を取り入れた実践的技能を身につける教育形態が開始されている\cite{DegreeApprenticeship}．
 \subsubsection{ペア評価の意図}
-\label{sec:org3b72fa4}
+\label{sec:orgb475747}
 関西学院大学理工学部・情報科学科で
 西谷が，PM，すなわち参加型学習の試みとして
 数式処理演習で実践している．
@@ -198,9 +197,8 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 この授業への取り組みの根底にあるのが，「共同体の構築・参加」であり、
 PMの実践を意図している．
 しかし，実際には知識の定着に至らない学生が多数いる．
-
 \subsubsection{学生の見え方}
-\label{sec:org4f95707}
+\label{sec:org689df47}
 その原因は次のとおりである．
 \begin{itemize}
 \item ペアによる演習のため，
@@ -246,33 +244,29 @@ active learningやproject based learningなどでは
 が起こっている．
 
 新しい徒弟制度的な学習であっても，
-ゼミの目的が変わるわけではない．
-しかし，役に立つスキルの定義が
-学生には習得前にはわからない．
+習得スキルレベルが変わるわけではない．
 ならば，「単位取得という脅しで縛りましょう」
 となるが，それでは伝統的な徒弟制と変わりはない．
-どうすれば，研究が役に立つことに学生が気づくのか,
-あるいは気づかせることができるのかが問題となる．
-以下では，その目標に近づくことを目指して
-システムを考える．
+どうすれば，役に立つことに学生が気づくのか．
+
 
 \section{構築システムのアイデア}
-\label{sec:orgff00c24}
+\label{sec:org46830ff}
 「新しい徒弟制」という視点に立って，研究室運用システムとして
 \begin{itemize}
 \item 日々の個人活動を構成員に公開する(blogシステム)
 \item ペアによる個別指導(遠隔ペアプロ)
 \item 欠席者のフォロー(スタンプ集め)
 \end{itemize}
-という機能の提供を当初の目標とした．
+という機能提供することを当初の目標とした．
 
 \subsection{blogシステム}
-\label{sec:orgadbfbb6}
+\label{sec:orge70e828}
 
 \begin{figure}[btp]
 \centering
 \includegraphics[width=.9\linewidth]{./images/myhelp_to_jekyll.png}
-\caption{\label{fig:orge17266d}
+\caption{\label{fig:org451daab}
 blog作成から公開までの流れ．}
 \end{figure}
 
@@ -302,23 +296,22 @@ programming skillの向上が期待される．
 \item Jekyll
 \end{itemize}
 のそれぞれの機能を利用して実装した．
-blogの作成から公開までの流れは図\ref{fig:orge17266d}のようになる．
+blogの作成から公開までの流れは図\ref{fig:org451daab}のようになる．
 
 \subsubsection{my\_help = 直交補空間}
-\label{sec:org9124b5c}
-my\_helpはRubygemsで提供されている. 
-知識の量が増えると，それを書き留めたメモやレポートが増え，
-ファイル構造にchunkingの必要が出てくる．
+\label{sec:org0d8ba19}
+my\_helpはRubygemsで提供されている，
+ファイル構造において，メモやレポートが増えればchunkingの必要が出てくる．
 ところが，chunkingすることにより，ディレクトリ構造が深くなる．
 その結果，レポートやメモの場所が把握できなくなる．
 これに対して，my\_helpは直交補空間を実現した知識構築を補助するツールである．
 ディレクトリに拘束される事なく，
 メモやレポートを作成・管理できるという利点があるため，
 どこからでもアクセスできる．
-my\_helpではblog形式で文書を作成し，構成員に公開する内容を記述する．
+my\_helpではBlogという形で文書を作成し，構成員に日報を伝える．
 
 \subsubsection{org-mode = 便利なmark down}
-\label{sec:orgef411f1}
+\label{sec:orgb2733e2}
 org-modeは，Emacs上で動作する
 プレーンテキストの文書作成環境である．
 HTMLや\LaTeX{}への変換等が可能であり，
@@ -326,25 +319,26 @@ HTMLや\LaTeX{}への変換等が可能であり，
 発表資料，スライドの作成など様々な用途に対応している．
 また，コードの実行の他，テーブル表記の入力，
 図や表の表示，ライブ計算，
-機能も兼ね備えている\cite{Org-mode}．
-blog文書の記述言語をorg-modeに統一することで
-一括した変換が可能となる．
+機能も兼ね備えている
+\cite{Org-mode}
+．
+今回のレポートとなる文書の作成するために，org-modeを用いる．
 
 \subsubsection{Jekyll = 晒すと何がいい？}
-\label{sec:orgff48ea2}
+\label{sec:org6777b62}
 my\_helpはemacsのorg-modeを利用しているが，個人での使用を
 前提としており，公開するためのシステムが存在しない．
 JekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
-GitHubには，Jekyllで作成されたサイトを公開する
+Githubには，Jekyllで作成されたサイトを公開する
 GitHub Pagesというサービスが用意されている．
 
-my\_helpで作成されたblogを，Jekyllに連携することで，
-localにおいてそのプレビューを確認することができる．
-また，git pushするだけでGithub Pagesでworld wideに公開される．
+my\_helpで作成されたBlogを，Jekyllに連携することで，
+localにおいてその完成度を確認することができる．
+また，git pushするだけでgithub pagesでworld wideに公開される．
 
 \subsection{遠隔ペアプロ}
-\label{sec:org02119b7}
+\label{sec:org522f47f}
 ペアの活動や欠席者の遅れをフォローするシステムを提供する．
 現在，ゼミを中心とした，個別の時間調整を行っている．
 しかし，１週間学校に来れない人もいるため，
@@ -355,11 +349,12 @@ localにおいてそのプレビューを確認することができる．
 ただ始めること．これがたぶん生産性の鍵なのだ．
 ペアプロが機能する理由は，「相方とペアプロ作業を予定する」ことで，
 「作業を始めることをお互いが強制する」からに違いない
-(原文より訳出)\cite{Joel}．
+(原文より訳出)．
+Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p．133．
 \end{quote}
 であるとされており，空間を共有する必要はない．
 
-キャンパスが郊外にあるため，効率的にゼミの研究を進めるためには，
+キャンパスが郊外にあるため，効率的にゼミナールの研究を進めるためには，
 遠隔での共同作業が不可欠である．そこで，いくつかの環境を使って
 実際の作業を試行して，結果を収集する．
 
@@ -373,72 +368,76 @@ localにおいてそのプレビューを確認することができる．
 
 などが効率的に行えることである．
 
-これらを踏まえ，遠隔でもリアルタイムで共同編集できる環境の
-有力な候補として，Teletype for AtomとVisual Studio Live Shareがある．
-Teletype for Atomは，ホストがKeyを発行し，
-そのKeyによってメンバーが参加できる．
+これらを踏まえ，遠隔でもリアルタイムで共同編集できる環境として，Teletype for Atom
+がある．
+Teletype for Atomは，ホストがKeyを発行し，そのKeyによってメンバーが，
+参加できる．
 参加すると，メンバーのカーソルが表示され，
-リアルタイムでコードの編集やコメントを書く事ができる．
+リアルタイムでコードの編集やコメントを
+書く事ができる．
 また，メンバーが退出しても，ホスト側に記録が残るようになっている\cite{Atom}．
-Visual Studio Live Shareも，
-遠隔で複数人がリアルタイムに
+また，Visual Studio Live Shareも遠隔で複数人がリアルタイムに
 コード編集，ブレークポイント，デバッガ操作を共有できる環境である\cite{VSC}．
-
 Visual Studio Live ShareとTeletype for Atomの違いは，
 編集できるファイルの数である．
 Type for Atomは，ホストが開いた１つのファイルのみ編集が
 可能であるが，Visual Studio Live Shareはフォルダ全体
 をリアルタイム編集可能である．
-また，Keyの発行がshareボタン一つでできる点や，
+また，Keyの発行がshareボタン一つで発行できる点や，
 ブレークポイントを設定し，コードの実行を共有できる点は
-Visual Studio Live Shareの特徴である\cite{VSCReview}．
+Visual Studio Live Shareの特徴である\cite{VSCRevie}．
 
 \subsection{スタンプ集め}
-\label{sec:org943e2d2}
-「スタンプ集め」とは，ゼミに欠席した学生のフォローシステムである．
+\label{sec:orge94bf55}
+ゼミに欠席した学生のフォローシステムである．
 構成員は教授者と学習者の両方に成り得るものとし，欠席者は
-ゼミ出席者を教授者とし，ゼミの内容や課題を教えてもらう学習者とする．
+ゼミ出席者を教授者としゼミの内容や課題を教えてもらう学習者とする．
 
-学習者は，教授者に教えてもらいながら，
-課題に取り組むとともに，blogを作成し，知識定着をはかる．
-課題達成後は教授者が学習者のスタンプを押す．
+欠席学生は，出席学生に教えてもらいながら，
+課題に取り組むとともに，Blogを作成し，知識定着をはかる．
+課題達成後は指導学生が学習者にスタンプを押す．
 そのスタンプが，課題達成の証明となり，卒業するまでの必須
-課程とする．
-また，学習者でも教授者にスタンプを押してもらうと，
-教授者としての資格を獲得し，
-他の学習者に教える事ができ，課題達成後はスタンプを押す．
-課題ごとにスタンプを用意し，全てのスタンプの取得が卒業の必須項目としている．
-このようなプロセスにより，教えることによる記憶強化が期待できる．
-また，不明瞭な点のあぶり出しが教える側でも可能になる．
-このようなプロセスを自動化するシステムの構築を目指す．
+過程とする．
+また，欠席者でも指導者にスタンプを押してもらうと，
+者としての資格を獲得し，
+他の欠席者に教える事ができ，課題達成後はスタンプを押す．
 
-\section{まとめ}
-\label{sec:org948095c}
-ゼミの目的を「研究する学生」と再定義した上で，
-旧来のacquisition metaphorしか知らない学生に，
-participation metaphorで知識習得することを強制する
-システムの構築を目標とした．
-「新しい徒弟制」の構築という視点に立って，
+ゼミ毎にスタンプを用意し，全てのスタンプの取得が卒業の必須項目とする．
+
+例えば
 \begin{itemize}
-\item 日々の個人活動を構成員に公開する(blogシステム)
-\item ペアによる個別指導(遠隔ペアプロ)
-\item 欠席者のフォロー(スタンプ集め)
+\item 全員Jekyllを入れて，blogを晒す
 \end{itemize}
-という機能を提供するシステムornbを構築している．
+というゼミで実行した課題があるとする．
+そいつを全員が実行したかどうかを，教えた方がチェックする．
 
-\begin{thebibliography}{99}
-\bibitem{Ushiogi_column} 潮木守一: 「フンボルト理念」とは神話だったのか？-自己理解の"進歩"と"後退"; アルカディア学報（教育学術新聞掲載コラム），https:\slash\slash{}www.shidaikyo.or.jp\slash{}riihe\slash{}research\slash{}arcadia\slash{}0246.html, (accessed on 8 July 2019).
-\bibitem{Ushiogi} 潮木守一: フンボルト理念の終焉？現代大学の新次元; 東信堂, 2008.
-\bibitem{Bell} Bell, S. : Project-Based Learning for the 21st Century: Skills for the Future; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol. 83， no. 2， pp. 39–43， (2010)．
-\bibitem{Settles} Settles, B. : Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
-\bibitem{溝上} 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287 (2007).
-\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで，https://orgmode.org/ja/ (accessed on 10 Feb 2019)．
-\bibitem{LaveWenger} ジーン・レイブ, エティエンヌ・ウェンガー, 佐伯胖訳, 福島正人解説: 状況に埋め込まれた学習, 正統的周辺参加; 産業図書, 1993.
-\bibitem{Sfard} Sfard, A. : On Two Metaphors for Learning and the Dangers of Choosing Just One; Educational Researcher, 27(1998), 413.
-\bibitem{DegreeApprenticeship} press release: Government rolls-out flagship Degree Apprenticeships; https:\slash\slash{}www.gov.uk\slash{}government\slash{}news\slash{}government-rolls-out-flagship-degree-apprenticeships, (accessed on 8 July 2019).
-\bibitem{Joel} Spolsky, J.，青木靖訳: Joel on software; オーム社，2005, p. 133．
-\bibitem{Atom} 【リアルタイム共同編集】Atomで出来るようになったってよ - Qiita; https:\slash\slash{}qiita.com\slash{}k-waragai\slash{}items\slash{}a372800c262f56fe688a (accessed on 7 July 2019)．
-\bibitem{VSC}  ［速報］「Visual Studio Live Share」発表。複数のプログラマがリアルタイムにコードの編集、ブレークポイント、デバッガ操作などを共有。; https:\slash\slash{}www.publickey1.jp\slash{}blog\slash{}17\slash{}visual\_studio\_live\_shareconnect\_2017.html (accessed on 7 July 2019)．
-\bibitem{VSCReview} リアルタイムでコードの共同編集ができる、Visual Studio Live Shareを使ってみた（パブリックプレビュー版）; http:\slash\slash{}yfp5521.hatenablog.com\slash{}entry\slash{}vscode-liveshare (accessed on 7 July 2019)．
+手順は以下の通り，
+\begin{itemize}
+\item 欠席者が出席者に聞く
+\item 出席者がスタンプを押す
+\item それが埋まってなかったら卒業なし．
+\end{itemize}
+これを自動化するシステム．
+
+いっぺん聞いたら他の人に教えるのはあり．
+そうすると，教えることによる記憶強化の可能性が高まる．
+また，不明瞭な点のあぶり出しが可能になる．
+
+\section{今後の課題}
+\label{sec:org518ce4b}
+
+\begin{thebibliography}{7}
+\bibitem{Ushiogi_column} 潮木守一: アルカディア学報（教育学術新聞掲載コラム），No．246.
+\bibitem{Ushiogi} 潮木守一: フンボルト理念の終焉？現代大学の新次元: 東信堂, 2008.
+\bibitem{Bell} S. Bell: ‘Project-Based Learning for the 21st Century: Skills for the Future’; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol. 83， no. 2， pp. 39–43， (2010)．
+\bibitem{Settles} B. Settles: ‘Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
+\bibitem{溝上} 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで， \url{https://orgmode.org/ja/} (accessed on 10 Feb 2019)．
+\bibitem{LaveWenger} シーン・レイフ, エティエンヌ・ウェンカー, 佐伯胖訳, 福島正人解説: '状況に埋め込まれた学習, 正統的周辺参加' : 産業図書, 1993.
+\bibitem{Sfard} A. Sfard: 'On Two Metaphors for Learning and the Dangers of Choosing Just One': Educational Researcher, 27(1998), 413.
+\bibitem{DegreeApprenticeship} press release: 'Government rolls-out flagship Degree Apprenticeships': https:\slash\slash{}www.gov.uk\slash{}government\slash{}news\slash{}government-rolls-out-flagship-degree-apprenticeships}, (accessed on 8 July 2019).
+\bibitem{Joel Spolsky} Joel Spolsky，青木靖訳: 'Joel on software': オーム社，2005, p. 133．
+\bibitem{Atom} 【リアルタイム共同編集】Atomで出来るようになったってよ - Qiita; \url{https://qiita.com/k-waragai/items/a372800c262f56fe688a} (accessed on 7 July 2019)．
+\bibitem{VSC}  ［速報］「Visual Studio Live Share」発表。複数のプログラマがリアルタイムにコードの編集、ブレークポイント、デバッガ操作などを共有。Connect(); 2017; \url{https://www.publickey1.jp/blog/17/visual_studio_live_shareconnect_2017.html} (accessed on 7 July 2019)．
+\bibitem{VSCReview} リアルタイムでコードの共同編集ができる、Visual Studio Live Shareを使ってみた（パブリックプレビュー版）; \url{http://yfp5521.hatenablog.com/entry/vscode-liveshare} (accessed on 7 July 2019)．
 \end{thebibliography}
 \end{document}
