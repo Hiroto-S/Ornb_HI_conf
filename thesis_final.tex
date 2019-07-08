@@ -17,6 +17,7 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage{url}
+\usepackage{cite}
 \author{bob}
 \date{}
 %和文タイトル
@@ -50,7 +51,7 @@ Shigeto R. Nishitani\addtocounter{footnote}{-1}\footnotemark
 
 
 \begin{abstract}
-\label{sec:org94eb056}
+\label{sec:org29ee7f0}
 At graduate research,
 although the process is more important than the results,
 most students don't notice it.
@@ -73,14 +74,13 @@ learning support, educational system, problem finding
 \maketitle
 \section{Introduction}
 
-\label{sec:orge985c0c}
+\label{sec:orgd678562}
 \subsection{ゼミナール}
-\label{sec:org09ec250}
+\label{sec:org48ea560}
 卒業研究などのゼミナール(以下、ゼミ)は，フンボルト理念を基礎としているとされる．
 その通説を潮木は次のようにまとめている．
 \begin{quote}
-近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
-\cite{Ushiogi_column}
+近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。\cite{Ushiogi_column}
 \end{quote}
 と. また，「大学が伝えるべきことは，
 いかにして新たな知識を発見するか，いかにして知識を進歩させるか，
@@ -99,8 +99,7 @@ learning support, educational system, problem finding
 新しい発見につながる途中経過を求めているにもかかわらず，
 既存の知識の暗記という結果のみを求めているという誤ったメッセージとして受け取られている可能性がある．
 実践的な課題を，project based learning \cite{Bell}
-やactive learningとして取り入れる試みがなされているが，
-\cite{Settles}，\cite{溝上}
+やactive learningとして取り入れる試みがなされているが\cite{Settles,溝上}，
 かける時間の割に，成果をあげるのが難しいとされている
 
 「研究する学生」を育てるには，個人に適合した指導が欠かせない．
@@ -110,7 +109,7 @@ learning support, educational system, problem finding
 研究指導が徒弟制的な制度であるとは全く予想していない．
 
 \subsection{目的}
-\label{sec:org78868cd}
+\label{sec:orga819000}
 次節で示す通り，このような旧態然とした徒弟制も現代的な視点で
 見直しが進められている．
 本プロジェクトで提供しようとするシステムornbは，
@@ -128,9 +127,9 @@ learning support, educational system, problem finding
 必要となる仕様を洗い出し，それに基づいた実装デザインを示す．
 
 \section{徒弟制の見直し}
-\label{sec:org3e34ba8}
+\label{sec:org8df5a38}
 \subsection{状況に埋め込まれた学習}
-\label{sec:orgb72c6a4}
+\label{sec:org04aec7c}
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
   という学習形態・概念が提案された\cite{LaveWenger}.
@@ -166,12 +165,12 @@ learning support, educational system, problem finding
 
 
 \subsection{AM/PM}
-\label{sec:org376e2bd}
+\label{sec:orgb13bbca}
 1998年数学者のSfardは，レイヴとウェンガーの考えを受け，
 学習者，教授者，研究者の知識に対する心持ちを
 AM(Acquisition Metaphor)とPM(Participation Metaphor)と
 名付けて分類した\cite{Sfard}．
-表\ref{tab:org02b241b}に示した通り，
+表\ref{tab:orgcfdd3f4}に示した通り，
 学習に対する従来の考え方であるAMは，個人が知識を習得することを目標とし，
 「学習」とは何かを獲得することであった．
 また，「知る」とは個人が所有するものであるとしていた．
@@ -183,7 +182,7 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と
 また徒弟制を築くことでお互いの知識構築がはかどる仕組みを目指した．
 
 \begin{table*}[bt]
-\caption{\label{tab:org02b241b}
+\caption{\label{tab:orgcfdd3f4}
 Acquisition metaphorとParticipation metaphorの比較\cite[Table Iを和訳]{Sfard}．}
 \centering
 \begin{tabular}{lll}
@@ -201,14 +200,14 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 \end{table*}
 
 \subsection{PMの実践例と学生の受け止め方}
-\label{sec:org7f5882e}
+\label{sec:org9fe9b03}
 このような徒弟制の見直しは，単なる概念として語られるだけでなく，
 実践としてシステム化されつつある.
 イギリスの一部の大学では2015年にDegree Apprenticeshipsという
 徒弟制度を取り入れた実践的技能を身につける
 教育形態が開始されている\cite{DegreeApprenticeship}．
 \subsubsection{ペア評価の意図}
-\label{sec:org3b72fa4}
+\label{sec:org4f984ba}
 関西学院大学理工学部・情報科学科で
 西谷が，PM，すなわち参加型学習の試みとして
 数式処理演習で実践している．
@@ -225,7 +224,7 @@ PMの実践を意図している．
 しかし，実際には知識の定着に至らない学生が多数いる．
 
 \subsubsection{学生の見え方}
-\label{sec:org4f95707}
+\label{sec:orgdc10d60}
 その原因は次のとおりである．
 \begin{itemize}
 \item ペアによる演習のため，
@@ -282,7 +281,7 @@ active learningやproject based learningなどでは
 システムを考える．
 
 \section{構築システムのアイデア}
-\label{sec:orgff00c24}
+\label{sec:orge9a026c}
 「新しい徒弟制」という視点に立って，研究室運用システムとして
 \begin{itemize}
 \item 日々の個人活動を構成員に公開する(blogシステム)
@@ -292,12 +291,12 @@ active learningやproject based learningなどでは
 という機能の提供を当初の目標とした．
 
 \subsection{blogシステム}
-\label{sec:orgadbfbb6}
+\label{sec:orgb1bd059}
 
 \begin{figure}[btp]
 \centering
 \includegraphics[width=.9\linewidth]{./images/myhelp_to_jekyll.png}
-\caption{\label{fig:orge17266d}
+\caption{\label{fig:org2b3e05c}
 blog作成から公開までの流れ．}
 \end{figure}
 
@@ -327,10 +326,10 @@ programming skillの向上が期待される．
 \item Jekyll
 \end{itemize}
 のそれぞれの機能を利用して実装した．
-blogの作成から公開までの流れは図\ref{fig:orge17266d}のようになる．
+blogの作成から公開までの流れは図\ref{fig:org2b3e05c}のようになる．
 
 \subsubsection{my\_help = 直交補空間}
-\label{sec:org9124b5c}
+\label{sec:org03ffdd8}
 my\_helpはRubygemsで提供されている. 
 知識の量が増えると，それを書き留めたメモやレポートが増え，
 ファイル構造にchunkingの必要が出てくる．
@@ -343,7 +342,7 @@ my\_helpはRubygemsで提供されている.
 my\_helpではblog形式で文書を作成し，構成員に公開する内容を記述する．
 
 \subsubsection{org-mode = 便利なmark down}
-\label{sec:orgef411f1}
+\label{sec:orgc6e47cf}
 org-modeは，Emacs上で動作する
 プレーンテキストの文書作成環境である．
 HTMLや\LaTeX{}への変換等が可能であり，
@@ -356,7 +355,7 @@ blog文書の記述言語をorg-modeに統一することで
 一括した変換が可能となる．
 
 \subsubsection{Jekyll = 晒すと何がいい？}
-\label{sec:orgff48ea2}
+\label{sec:orgd3a23a3}
 my\_helpはemacsのorg-modeを利用しているが，個人での使用を
 前提としており，公開するためのシステムが存在しない．
 JekyllはRubygemsで提供されている静的サイトジェネレーターである．
@@ -369,7 +368,7 @@ localにおいてそのプレビューを確認することができる．
 また，git pushするだけでGithub Pagesでworld wideに公開される．
 
 \subsection{遠隔ペアプロ}
-\label{sec:org02119b7}
+\label{sec:org9528da1}
 ペアの活動や欠席者の遅れをフォローするシステムを提供する．
 現在，ゼミを中心とした，個別の時間調整を行っている．
 しかし，１週間学校に来れない人もいるため，
@@ -419,7 +418,7 @@ Type for Atomは，ホストが開いた１つのファイルのみ編集が
 Visual Studio Live Shareの特徴である\cite{VSCReview}．
 
 \subsection{スタンプ集め}
-\label{sec:org943e2d2}
+\label{sec:orgf20c1c4}
 「スタンプ集め」とは，ゼミに欠席した学生のフォローシステムである．
 構成員は教授者と学習者の両方に成り得るものとし，欠席者は
 ゼミ出席者を教授者とし，ゼミの内容や課題を教えてもらう学習者とする．
@@ -438,7 +437,7 @@ Visual Studio Live Shareの特徴である\cite{VSCReview}．
 このようなプロセスを自動化するシステムの構築を目指す．
 
 \section{まとめ}
-\label{sec:org948095c}
+\label{sec:org5c09c25}
 ゼミの目的を「研究する学生」と再定義した上で，
 旧来のacquisition metaphorしか知らない学生に，
 participation metaphorで知識習得することを強制する
