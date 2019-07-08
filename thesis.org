@@ -2,6 +2,9 @@
 #+STARTUP: indent nolineimages
 #+LANGUAGE:  jp
 #+OPTIONS:  toc:nil  timestamp:nil
+
+#+LaTeX_HEADER: \usepackage{url}
+
 #+DATE:
 
 * abstract
@@ -28,7 +31,7 @@
 近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
 \cite{Ushiogi_column}
 #+end_quote
-と． また，「大学が伝えるべきことは，
+と. また，「大学が伝えるべきことは，
 いかにして新たな知識を発見するか，いかにして知識を進歩させるか，
 そのための技法である」との観点から，「研究する学生」
 を志向したとしている\cite{Ushiogi}．
@@ -156,8 +159,8 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した
 PMの実践を意図している．
 しかし，実際には知識の定着に至らない学生が多数いる．
 *** 学生の見え方
-なぜ，
-- 一つ目の要因はペアによる演習のため，
+その原因は次のとおりである．
+- ペアによる演習のため，
   一人が作業すれば課題をクリアできる点である．
   つまり，問題毎に役割を振り分け
   片方が問題を解いている時，
@@ -168,8 +171,8 @@ PMの実践を意図している．
   知識定着を目的とするのではなく，
   課題達成，単位習得の事のみを考えた結果である．
 
-- 二つ目は，ペアで課題を一つ提出することが，
-  いわゆる出席点となるため
+- ペアで課題を一つ提出することが，
+  出席点となるため
   一人が授業を欠席しても，
   点数が減点されることがない点である．
   これは，一つ目に述べた要因より酷い例であり，
@@ -178,7 +181,7 @@ PMの実践を意図している．
 
 結果的に学生的視点から見ると、
 この授業はPMといった考え方を気づかせる授業ではなく
-学生にとって，「授業に出なくても良い楽に単位を取れる授業」
+「授業に出なくても良い楽に単位を取れる授業」
 という風に見受けられた．
 
 個人での学習よりも互いに高め合い，
@@ -187,20 +190,21 @@ PMの実践を意図している．
 前者がほとんどの課題をこなし，
 後者はほとんど考えないというパターンも存在した．
 
-これら一連のなぜを考えると、次の疑問が湧いてくる．
-はたして、PMを理解して共同体を作ろうとまで考える学生はいたのだろうか？
-
-教育の非対称性，
+学習の目的を
+active learningやproject based learningなどでは
+共同学習のスキル習得としてごまかすこともあるが，
+演習ではスキルがついてなければ学習したとは言い難い．
+ここで教育の非対称性，
 - 教える側はどう役にたつかを知っているが，
 - 教わる側は，知識を獲得するまでわからない．
+が起こっている．
 
-- サボりたい
-- 教わることはどこで役にたつかわからない
-- 役に立たない
-# 数学，英語全てやくに立たない．
-ならば，単位取得で縛りましょう．
-となるが，それでは伝統的な徒弟制となんら変わりはない．
+新しい徒弟制度的な学習であっても，
+習得スキルレベルが変わるわけではない．
+ならば，「単位取得という脅しで縛りましょう」
+となるが，それでは伝統的な徒弟制と変わりはない．
 どうすれば，役に立つことに学生が気づくのか．
+
 
 * 構築システムのアイデア
 「新しい徒弟制」という視点に立って，研究室運用システムとして
@@ -297,10 +301,11 @@ Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p．13
 実際の作業を試行して，結果を収集する．
 
 そのような環境で必要となる仕様は，新しいタイプの徒弟制の視点に立って，
-1． 先輩と後輩によるペアプロ
-1． コードのリアルタイム共有
-1． 音声，ポインタなどによる指示
-1． 作業記録，振り返り
+1. 先輩と後輩によるペアプロ
+1. コードのリアルタイム共有
+1. 音声，ポインタなどによる指示
+1. 作業記録，振り返り
+
 などが効率的に行えることである．
 
 これらを踏まえ，遠隔でもリアルタイムで共同編集できる環境として，Teletype for Atom
@@ -358,13 +363,14 @@ Visual Studio Live Shareの特徴である\cite{VSCRevie}．
 \begin{thebibliography}{7}
 \bibitem{Ushiogi_column} 潮木守一: アルカディア学報（教育学術新聞掲載コラム），No．246.
 \bibitem{Ushiogi} 潮木守一: フンボルト理念の終焉？現代大学の新次元: 東信堂, 2008.
-\bibitem{Bell} S． Bell: ‘Project-Based Learning for the 21st Century: Skills for the Future’; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol． 83， no． 2， pp． 39–43， (2010)．
-\bibitem{Settles} B． Settles: ‘Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
-\bibitem{溝上} 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（2007）
-\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで， \url{https://orgmode.org/ja/} (accessed on 10 Feb 2019)．
+\bibitem{Bell} S. Bell: ‘Project-Based Learning for the 21st Century: Skills for the Future’; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol. 83， no. 2， pp. 39–43， (2010)．
+\bibitem{Settles} B. Settles: ‘Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
+\bibitem{溝上} 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで， \url{https://
+/orgmode.org/ja/} (accessed on 10 Feb 2019)．
 \bibitem{LaveWenger} シーン・レイフ, エティエンヌ・ウェンカー, 佐伯胖訳, 福島正人解説: '状況に埋め込まれた学習, 正統的周辺参加' : 産業図書, 1993.
 \bibitem{Sfard} A. Sfard: 'On Two Metaphors for Learning and the Dangers of Choosing Just One': Educational Researcher, 27(1998), 413.
 \bibitem{DegreeApprenticeship} press release: 'Government rolls-out flagship Degree Apprenticeships': \url{https://www.gov.uk/government/news/government-rolls-out-flagship-degree-apprenticeships}, (accessed on 8 July 2019).
+\bibitem{Joel Spolsky} Joel Spolsky，青木靖訳: 'Joel on software': オーム社，2005, p. 133．
 \bibitem{Atom} 【リアルタイム共同編集】Atomで出来るようになったってよ - Qiita; \url{https://qiita.com/k-waragai/items/a372800c262f56fe688a} (accessed on 7 July 2019)．
 \bibitem{VSC}  ［速報］「Visual Studio Live Share」発表。複数のプログラマがリアルタイムにコードの編集、ブレークポイント、デバッガ操作などを共有。Connect(); 2017; \url{https://www.publickey1.jp/blog/17/visual_studio_live_shareconnect_2017.html} (accessed on 7 July 2019)．
 \bibitem{VSCReview} リアルタイムでコードの共同編集ができる、Visual Studio Live Shareを使ってみた（パブリックプレビュー版）; \url{http://yfp5521.hatenablog.com/entry/vscode-liveshare} (accessed on 7 July 2019)．

@@ -1,65 +1,34 @@
-% Intended LaTeX compiler: pdflatex
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages
+#+LANGUAGE:  jp
+#+OPTIONS:  toc:nil  timestamp:nil
+#+DATE:
 
-  \documentclass[a4,p11]{article}
-  \usepackage[dvipdfmx]{graphicx}
-  \usepackage[utf8]{inputenc}
-  \usepackage[T1]{fontenc}
-  
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{grffile}
-\usepackage{longtable}
-\usepackage{wrapfig}
-\usepackage{rotating}
-\usepackage[normalem]{ulem}
-\usepackage{amsmath}
-\usepackage{textcomp}
-\usepackage{amssymb}
-\usepackage{capt-of}
-\usepackage{hyperref}
-\usepackage{url}
-\author{bob}
-\date{}
-\title{}
-\hypersetup{
- pdfauthor={bob},
- pdftitle={},
- pdfkeywords={},
- pdfsubject={},
- pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
- pdflang={Jp}}
-\begin{document}
+* abstract
+  At graduate research，
+  although the process is more important than the results，
+  most students don't notice it．
+  Because the guild system is nice to learn the process，
+  the graduate reseach possesses a kind of
+  relationship between
+  a mentor and a padawan learner．
+
+  On this project，
+  we are developing a system for
+  noticing importance of learning process，
+  ornb， whose specifications and
+  the connections to a static web system， jekyll，
 
 
-\section{abstract}
-\label{sec:orge75ea7f}
-At graduate research，
-although the process is more important than the results，
-most students don't notice it．
-Because the guild system is nice to learn the process，
-the graduate reseach possesses a kind of
-relationship between
-a mentor and a padawan learner．
-
-On this project，
-we are developing a system for
-noticing importance of learning process，
-ornb， whose specifications and
-the connections to a static web system， jekyll，
-
-
-\section{Introduction}
-\label{sec:org978852e}
-\subsection{ゼミナール}
-\label{sec:org64a4937}
+* Introduction
+** ゼミナール
 卒業研究などのゼミナール(以下、ゼミ)は，フンボルト理念を基礎としているとされる．
 その通説を潮木は次のようにまとめている．
-\begin{quote}
+#+begin_quote
 近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
 \cite{Ushiogi_column}
-\end{quote}
-と. また，「大学が伝えるべきことは，
+#+end_quote
+と． また，「大学が伝えるべきことは，
 いかにして新たな知識を発見するか，いかにして知識を進歩させるか，
 そのための技法である」との観点から，「研究する学生」
 を志向したとしている\cite{Ushiogi}．
@@ -86,15 +55,12 @@ the connections to a static web system， jekyll，
 しかし，ゼミナールへやってくる学生は，
 研究指導が徒弟制的な制度であるとは全く予想していない．
 
-\subsection{目的}
-\label{sec:org36fd3bc}
+** 目的
 次節で示す通り，このような旧態然とした徒弟制も現代的な視点で
 見直しが進められている．
 本プロジェクトで提供しようとするシステムは，
-\begin{itemize}
-\item 研究室は徒弟制
-\item 学生はそれを知らない
-\end{itemize}
+- 研究室は徒弟制
+- 学生はそれを知らない
 という前提のもとで，徒弟制を現代的で新たな学習形態として提供することを
 目的としている．
 
@@ -104,17 +70,15 @@ the connections to a static web system， jekyll，
 その上で，近代的な徒弟制を研究室活動に導入するのに
 必要となる仕様を洗い出し，それに基づいた実装デザインを示す．
 
-\section{徒弟制の見直し}
-\label{sec:org98a9f41}
-\subsection{状況に埋め込まれた学習}
-\label{sec:orge3c6ec1}
+* 徒弟制の見直し
+** 状況に埋め込まれた学習
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
   という学習形態・概念が提案された\cite{LaveWenger}.
   彼らは，アフリカの仕立て職人や助産婦の育成法を社会学的に詳しく調査した結果，
   徒弟制のなかに学びの本質があると指摘した．
 少し複雑ではあるが，その概念をもっとも短くまとめたと思われる箇所を以下にそのまま書き写す．
-\begin{quote}
+#+begin_quote
 学習はいわば参加という枠組で生じる過程であり，
 個人の頭の中でではないのである．
 このことは，とりもなおさず，
@@ -138,16 +102,15 @@ the connections to a static web system， jekyll，
 
 また新参者を親方，ボス，あるいは管理者と深く対立する関係に陥らせる，参加させるよりも非自発的に隷従させるなど，これらの条件は実践における学習の可能性を部分的に，もしくは完全に，歪めてしまうと唱えた．
 \cite{LaveWenger}[p.42]
-\end{quote}
+#+end_quote
 と記している．
 
 
-\subsection{AM/PM}
-\label{sec:orgbcf98bc}
+** AM/PM
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者の知識に対する心持ちを
 AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した\cite{Sfard}．
-表\ref{tab:org70ea87e}に示した通り，
+表[[table:AM/PM]]に示した通り，
 学習に対する従来の考え方であるAMは，個人が知識を習得することを目標とし，
 「学習」とは何かを獲得することであった．
 また，「知る」とは個人が所有するものであるとしていた．
@@ -157,32 +120,27 @@ AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した
 つまり，個人ではなく，教授者，学習者が共同体（チーム）として，
 また徒弟制を築くことでお互いの知識構築がはかどる仕組みとなっている．
 
-\begin{table}[bt]
-\caption{\label{tab:org70ea87e}
-Acquisition metaphorとParticipation metaphorの比較．}
-\centering
-\begin{tabular}{lll}
-\hline
-Acquisition metaphor & 要素 & Participation metaphor\\
-\hline
-個人を豊かにする & 学習の目標 & 共同体の構築\\
-何かを獲得する & 学習するとは & 参加者となる\\
-受容者，再構築者 & 学習者 & 周辺参加者，徒弟\\
-供給者，促進者，仲裁人 & 教授者 & 有識の参加者\\
-資産，所有物，一般商品 & 知識，コンセプト & 実践，論考，活動の一側面\\
-持つ，所有する & 知るとは & 所属する，参加する，コミュニケーションをとる\\
-\hline
-\end{tabular}
-\end{table}
+#+CAPTION: Acquisition metaphorとParticipation metaphorの比較．
+#+NAME: table:AM/PM
+#+ATTR_LaTeX: :align lll
+#+ATTR_LaTeX: :placement [bt]
+|------------------------+------------------+----------------------------------------------|
+| Acquisition metaphor   | 要素             | Participation metaphor                       |
+|------------------------+------------------+----------------------------------------------|
+| 個人を豊かにする       | 学習の目標       | 共同体の構築                                 |
+| 何かを獲得する         | 学習するとは     | 参加者となる                                 |
+| 受容者，再構築者       | 学習者           | 周辺参加者，徒弟                             |
+| 供給者，促進者，仲裁人 | 教授者           | 有識の参加者                                 |
+| 資産，所有物，一般商品 | 知識，コンセプト | 実践，論考，活動の一側面                     |
+| 持つ，所有する         | 知るとは         | 所属する，参加する，コミュニケーションをとる |
+|------------------------+------------------+----------------------------------------------|
 
-\subsection{PMの実践例と学生の受け止め方}
-\label{sec:orga1d0cad}
+** PMの実践例と学生の受け止め方
 このような徒弟制の見直しは，単なる概念として語られるだけでなく，
 実践としてシステム化されつつある.
 イギリスの一部の大学では2015年にDegree Apprenticeshipsという
 徒弟制度を取り入れた実践的技能を身につける教育形態が開始されている\cite{DegreeApprenticeship}．
-\subsubsection{ペア評価の意図}
-\label{sec:org703718a}
+*** ペア評価の意図
 関西学院大学理工学部・情報科学科で
 西谷が，PM，すなわち参加型学習の試みとして
 数式処理演習で実践している．
@@ -197,29 +155,26 @@ Acquisition metaphor & 要素 & Participation metaphor\\
 この授業への取り組みの根底にあるのが，「共同体の構築・参加」であり、
 PMの実践を意図している．
 しかし，実際には知識の定着に至らない学生が多数いる．
-\subsubsection{学生の見え方}
-\label{sec:org6a5685f}
+*** 学生の見え方
 その原因は次のとおりである．
-\begin{itemize}
-\item ペアによる演習のため，
-一人が作業すれば課題をクリアできる点である．
-つまり，問題毎に役割を振り分け
-片方が問題を解いている時，
-もう片方は携帯を見るなど考える事を
-完全にやめることがある．
-一緒に考えることをせず，
-「休憩」の時間を作ることで
-知識定着を目的とするのではなく，
-課題達成，単位習得の事のみを考えた結果である．
+- ペアによる演習のため，
+  一人が作業すれば課題をクリアできる点である．
+  つまり，問題毎に役割を振り分け
+  片方が問題を解いている時，
+  もう片方は携帯を見るなど考える事を
+  完全にやめることがある．
+  一緒に考えることをせず，
+  「休憩」の時間を作ることで
+  知識定着を目的とするのではなく，
+  課題達成，単位習得の事のみを考えた結果である．
 
-\item ペアで課題を一つ提出することが，
-出席点となるため
-一人が授業を欠席しても，
-点数が減点されることがない点である．
-これは，一つ目に述べた要因より酷い例であり，
-日にち毎に出席する担当を決めることで
-授業に出席，参加すらしない場合があった．
-\end{itemize}
+- ペアで課題を一つ提出することが，
+  出席点となるため
+  一人が授業を欠席しても，
+  点数が減点されることがない点である．
+  これは，一つ目に述べた要因より酷い例であり，
+  日にち毎に出席する担当を決めることで
+  授業に出席，参加すらしない場合があった．
 
 結果的に学生的視点から見ると、
 この授業はPMといった考え方を気づかせる授業ではなく
@@ -237,10 +192,8 @@ active learningやproject based learningなどでは
 共同学習のスキル習得としてごまかすこともあるが，
 演習ではスキルがついてなければ学習したとは言い難い．
 ここで教育の非対称性，
-\begin{itemize}
-\item 教える側はどう役にたつかを知っているが，
-\item 教わる側は，知識を獲得するまでわからない．
-\end{itemize}
+- 教える側はどう役にたつかを知っているが，
+- 教わる側は，知識を獲得するまでわからない．
 が起こっている．
 
 新しい徒弟制度的な学習であっても，
@@ -250,25 +203,19 @@ active learningやproject based learningなどでは
 どうすれば，役に立つことに学生が気づくのか．
 
 
-\section{構築システムのアイデア}
-\label{sec:org9069399}
+* 構築システムのアイデア
 「新しい徒弟制」という視点に立って，研究室運用システムとして
-\begin{itemize}
-\item 日々の個人活動を構成員に公開する(blogシステム)
-\item ペアによる個別指導(遠隔ペアプロ)
-\item 欠席者のフォロー(スタンプ集め)
-\end{itemize}
+- 日々の個人活動を構成員に公開する(blogシステム)
+- ペアによる個別指導(遠隔ペアプロ)
+- 欠席者のフォロー(スタンプ集め)
 という機能提供することを当初の目標とした．
 
-\subsection{blogシステム}
-\label{sec:org8706004}
+** blogシステム
 
-\begin{figure}[btp]
-\centering
-\includegraphics[width=.9\linewidth]{./images/myhelp_to_jekyll.png}
-\caption{\label{fig:orgc2d094b}
-blog作成から公開までの流れ．}
-\end{figure}
+#+caption: blog作成から公開までの流れ．
+#+name: fig:myhelp_to_jekyll
+#+ATTR_LATEX: :placement [btp]
+[[file:./images/myhelp_to_jekyll.png]]
 
 学生個人のゼミ活動はゼミ発表などであるが，
 より細かな活動を記録することが望ましい．
@@ -279,42 +226,36 @@ blog作成から公開までの流れ．}
 より良いプログラマの習慣は，
 活動記録としてblogの公開が推奨されている．
 これによって，
-\begin{itemize}
-\item どのようなアイデアで
-\item どこで何を調べて
-\item どこで挫折したか
-\end{itemize}
+- どのようなアイデアで
+- どこで何を調べて
+- どこで挫折したか
 などを公開することで，codingがうまくいかなかったとしても，
 思考の過程を記録し，先輩や同僚のcode reviewを通じて，
 programming skillの向上が期待される．
 また会社においては，これは日報にも通じている．
 
 研究室内の活動においても実践可能なblogシステムを目指して，
-\begin{itemize}
-\item my\_help
-\item org-mode
-\item Jekyll
-\end{itemize}
+- my_help
+- org-mode
+- Jekyll
 のそれぞれの機能を利用して実装した．
-blogの作成から公開までの流れは図\ref{fig:orgc2d094b}のようになる．
+blogの作成から公開までの流れは図[[fig:myhelp_to_jekyll]]のようになる．
 
-\subsubsection{my\_help = 直交補空間}
-\label{sec:org607548b}
-my\_helpはRubygemsで提供されている，
+*** my_help = 直交補空間
+my_helpはRubygemsで提供されている，
 ファイル構造において，メモやレポートが増えればchunkingの必要が出てくる．
 ところが，chunkingすることにより，ディレクトリ構造が深くなる．
 その結果，レポートやメモの場所が把握できなくなる．
-これに対して，my\_helpは直交補空間を実現した知識構築を補助するツールである．
+これに対して，my_helpは直交補空間を実現した知識構築を補助するツールである．
 ディレクトリに拘束される事なく，
 メモやレポートを作成・管理できるという利点があるため，
 どこからでもアクセスできる．
-my\_helpではBlogという形で文書を作成し，構成員に日報を伝える．
+my_helpではBlogという形で文書を作成し，構成員に日報を伝える．
 
-\subsubsection{org-mode = 便利なmark down}
-\label{sec:orgff62697}
+*** org-mode = 便利なmark down
 org-modeは，Emacs上で動作する
 プレーンテキストの文書作成環境である．
-HTMLや\LaTeX{}への変換等が可能であり，
+HTMLやLaTeXへの変換等が可能であり，
 ノートやメモの作成，TODOリストの管理，
 発表資料，スライドの作成など様々な用途に対応している．
 また，コードの実行の他，テーブル表記の入力，
@@ -324,34 +265,32 @@ HTMLや\LaTeX{}への変換等が可能であり，
 ．
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
-\subsubsection{Jekyll = 晒すと何がいい？}
-\label{sec:org2aa3d74}
-my\_helpはemacsのorg-modeを利用しているが，個人での使用を
+*** Jekyll = 晒すと何がいい？
+my_helpはemacsのorg-modeを利用しているが，個人での使用を
 前提としており，公開するためのシステムが存在しない．
 JekyllはRubygemsで提供されている静的サイトジェネレーターである．
 テーマや構成を変更することができ，好みのサイトを作成できる．
 Githubには，Jekyllで作成されたサイトを公開する
 GitHub Pagesというサービスが用意されている．
-
-my\_helpで作成されたBlogを，Jekyllに連携することで，
+ 
+my_helpで作成されたBlogを，Jekyllに連携することで，
 localにおいてその完成度を確認することができる．
 また，git pushするだけでgithub pagesでworld wideに公開される．
 
-\subsection{遠隔ペアプロ}
-\label{sec:org55b9b63}
+** 遠隔ペアプロ
 ペアの活動や欠席者の遅れをフォローするシステムを提供する．
 現在，ゼミを中心とした，個別の時間調整を行っている．
 しかし，１週間学校に来れない人もいるため，
 それを援助すべく遠隔でもペアプロや知識の共有をする．
 
 ペアプロが機能する理由は，
-\begin{quote}
+#+begin_quote
 ただ始めること．これがたぶん生産性の鍵なのだ．
 ペアプロが機能する理由は，「相方とペアプロ作業を予定する」ことで，
 「作業を始めることをお互いが強制する」からに違いない
 (原文より訳出)．
 Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p．133．
-\end{quote}
+#+end_quote
 であるとされており，空間を共有する必要はない．
 
 キャンパスが郊外にあるため，効率的にゼミナールの研究を進めるためには，
@@ -359,12 +298,10 @@ Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p．13
 実際の作業を試行して，結果を収集する．
 
 そのような環境で必要となる仕様は，新しいタイプの徒弟制の視点に立って，
-\begin{enumerate}
-\item 先輩と後輩によるペアプロ
-\item コードのリアルタイム共有
-\item 音声，ポインタなどによる指示
-\item 作業記録，振り返り
-\end{enumerate}
+1. 先輩と後輩によるペアプロ
+1. コードのリアルタイム共有
+1. 音声，ポインタなどによる指示
+1. 作業記録，振り返り
 
 などが効率的に行えることである．
 
@@ -387,8 +324,7 @@ Type for Atomは，ホストが開いた１つのファイルのみ編集が
 ブレークポイントを設定し，コードの実行を共有できる点は
 Visual Studio Live Shareの特徴である\cite{VSCRevie}．
 
-\subsection{スタンプ集め}
-\label{sec:org8f042cc}
+** スタンプ集め
 ゼミに欠席した学生のフォローシステムである．
 構成員は教授者と学習者の両方に成り得るものとし，欠席者は
 ゼミ出席者を教授者としゼミの内容や課題を教えてもらう学習者とする．
@@ -405,40 +341,187 @@ Visual Studio Live Shareの特徴である\cite{VSCRevie}．
 ゼミ毎にスタンプを用意し，全てのスタンプの取得が卒業の必須項目とする．
 
 例えば
-\begin{itemize}
-\item 全員Jekyllを入れて，blogを晒す
-\end{itemize}
+- 全員Jekyllを入れて，blogを晒す
 というゼミで実行した課題があるとする．
 そいつを全員が実行したかどうかを，教えた方がチェックする．
 
 手順は以下の通り，
-\begin{itemize}
-\item 欠席者が出席者に聞く
-\item 出席者がスタンプを押す
-\item それが埋まってなかったら卒業なし．
-\end{itemize}
+- 欠席者が出席者に聞く
+- 出席者がスタンプを押す
+- それが埋まってなかったら卒業なし．
 これを自動化するシステム．
 
 いっぺん聞いたら他の人に教えるのはあり．
 そうすると，教えることによる記憶強化の可能性が高まる．
 また，不明瞭な点のあぶり出しが可能になる．
 
-\section{今後の課題}
-\label{sec:org3aeb8bd}
+* 今後の課題
 
 \begin{thebibliography}{7}
 \bibitem{Ushiogi_column} 潮木守一: アルカディア学報（教育学術新聞掲載コラム），No．246.
 \bibitem{Ushiogi} 潮木守一: フンボルト理念の終焉？現代大学の新次元: 東信堂, 2008.
-\bibitem{Bell} S. Bell: ‘Project-Based Learning for the 21st Century: Skills for the Future’; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol. 83， no. 2， pp. 39–43， (2010)．
-\bibitem{Settles} B. Settles: ‘Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
-\bibitem{溝上} 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで， \url{https://
-/orgmode.org/ja/} (accessed on 10 Feb 2019)．
+\bibitem{Bell} S． Bell: ‘Project-Based Learning for the 21st Century: Skills for the Future’; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol． 83， no． 2， pp． 39–43， (2010)．
+\bibitem{Settles} B． Settles: ‘Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
+\bibitem{溝上} 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（2007）
+\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで， \url{https://orgmode.org/ja/} (accessed on 10 Feb 2019)．
 \bibitem{LaveWenger} シーン・レイフ, エティエンヌ・ウェンカー, 佐伯胖訳, 福島正人解説: '状況に埋め込まれた学習, 正統的周辺参加' : 産業図書, 1993.
 \bibitem{Sfard} A. Sfard: 'On Two Metaphors for Learning and the Dangers of Choosing Just One': Educational Researcher, 27(1998), 413.
-\bibitem{DegreeApprenticeship} press release: 'Government rolls-out flagship Degree Apprenticeships': \url{https://www.gov.uk/government/news/government-rolls-out-flagship-degree-apprenticeships}, (accessed on 8 July 2019).
-\bibitem{Joel Spolsky} Joel Spolsky，青木靖訳: 'Joel on software': オーム社，2005, p. 133．
+\bibitem{DegreeApprenticeship} press release: 'Government rolls-out flagship Degree Apprenticeships': \url{https://www.gov.uk/government/news/government-rolls-out-flagship-degree-apprenticeships}, (acc\bibitem{Joel Spolsky} Joel Spolsky，青木靖訳: 'Joel on software': オーム社，2005, p. 133．
+essed on 8 July 2019).
 \bibitem{Atom} 【リアルタイム共同編集】Atomで出来るようになったってよ - Qiita; \url{https://qiita.com/k-waragai/items/a372800c262f56fe688a} (accessed on 7 July 2019)．
 \bibitem{VSC}  ［速報］「Visual Studio Live Share」発表。複数のプログラマがリアルタイムにコードの編集、ブレークポイント、デバッガ操作などを共有。Connect(); 2017; \url{https://www.publickey1.jp/blog/17/visual_studio_live_shareconnect_2017.html} (accessed on 7 July 2019)．
 \bibitem{VSCReview} リアルタイムでコードの共同編集ができる、Visual Studio Live Shareを使ってみた（パブリックプレビュー版）; \url{http://yfp5521.hatenablog.com/entry/vscode-liveshare} (accessed on 7 July 2019)．
 \end{thebibliography}
-\end{document}
+
+* COMMENT その他
+
+** 客観的な事実の記述
+- merit見えない， demerit時間が取られる
+- 西谷研究室では，生徒の出席率が悪い．
+  これの原因は，他人任せであることが一番大きい．
+  「誰かが出席していれば，なんとかしてくれる」，
+  「欠席による出席者より理解が遅れるという危機感の無さ」，
+  「プライベートとゼミとの優先順位がおかしい」
+  等が挙げられる．
+
+  卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
+  プログラミング，レポートの書き方を教える．
+  この時，後輩は自らの意思で参加するという考え方であるべきだ．
+  西谷研究室では，後輩が参加者となり先輩から学ぶという風潮が見受けられない．
+  後輩は，卒業研究を発表すること，
+  結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
+
+** 新しい徒弟制と古い徒弟制，西谷研でどうするよ？
+- このような参加型の学習を西谷研で実践するのに何が必要か？
+- 徒弟制の本質
+- 親方と徒弟の関係
+  - 古いよね
+  - 見習い？
+  - 習慣
+- 先輩の仕事
+- 硬い上下関係ではなく，参加して学ぶ
+- 徒弟のモチベーション，参加意欲
+- 教える方も，確固とした知識として身につけることができる
+- 今まで何で，教えなかった
+- ダンスはあるけど，
+- 後輩と勉強する機会がない
+- そういう機会がないから
+- 優先順位がおかしい
+- 共同体への参加というのを気づいていなかった．
+- 同じやろ
+- 声かけ
+- 目に見える形にして共有する
+
+学べる人はどこでも学べる？
+
+
+** [o] 日報
+- 自分がやったことの記録
+- blogはそのつもり
+- 見た目って大事
+- 手軽にできる
+- org
+- my_help
+
+** [x] 罰を与える？　
+- 卒業はなし
+- 恥ずかしい
+- 何をするとしでかしたと思う？
+- 名指しで言われる
+- 全体の目が通るところで糾弾
+- てのはめんどいんで，スタンプ集めに変更
+- 糾弾せよ！！！自己批判せよ！！！
+** [ ] チームによる課題達成
+- こいつをシステムにする？
+- こいつを徒弟制にする？
+- こいつをPMの実践に昇華する
+** [ ] 卒業研究や授業の課題において，その過程が重要である．
+# 学生は，PMの考え方や過程の重要性に気づかない事が多いが，数式計算処理演習を受けた学生に，ペアで聞くと，「他人事だと思っているから」，「興味のない授業であるから」，「自分が学んでいることとの関連性を見出せないから」という様な意見を得た．
+
+自ら行った事を過程も含めてレポートとしてまとめ，公開することで，知識構築に繋がると考える．
+レポートにまとめることは，それらの過程も含めて理解する必要がある．また，自らの復習となり，より知識として身につく．
+次に，公に公開することで，日本語や文の構築に気を使うため，学んだことの理解だけでなく，レポート作成の知識も身につくといった利点がある．
+また，公開することで他の人から指摘や意見をもらうことができるため，そこで議論を広げることで，
+より知識が定着する．
+これらを実現するために，org-mode，ruby，my_help，Jekyll，GitHub Pagesを用いて過程の重要性を気づかせるシステムを提案する．
+
+** [ ] スイッチ
+- 象(感情)と象使い(理性)
+- サボっているように見えて，実は混乱している
+- 双曲性の話
+- 縛る
+- defaultを変える
+
+
+** [x] repl == jupyter notebook
+てのは試行錯誤．
+loopがある．
+Jekyllとか，github， と結びつけて，システムにならないか？
+
+
+** レポートの作成と公開
+
+次に，レポートの作成について述べる．
+レポートの作成はRubygemseで提供されている，
+my_helpを用いる．
+
+my_helpを以下の方法でインストールする．
+#+begin_quote
+  #+begin_example
+  gem install my_help
+  #+end_example
+#+end_quote
+
+次に，my_helpにblogというlistを作成するために，
+以下のコマンドを実行する．
+
+#+begin_quote
+  #+begin_example
+  my_help new blog
+  #+end_example
+#+end_quote
+
+これで新しいlistが作成される．
+次にblogの内容を編集するため，以下を実行する．
+#+begin_quote
+  #+begin_example
+  my_help edit blog
+  #+end_example
+#+end_quote
+
+編集画面では，タイトルをつけた後，タイトルの横に
+図[[fg:add_date]]のような日付を付けることとする．
+#+caption: 日付を付ける例
+#+name: fg:add_date
+#+ATTR_LATEX: :width 8cm
+[[file:．/images/add_date．png]]
+
+また，以下のコマンドで日付を付ける事が出来る．
+#+begin_quote
+  #+begin_example
+  Control-u Control-c ．
+  #+end_example
+#+end_quote
+
+あとは，Blogの内容を書き込んでいく．
+
+** Jekyllのインストールと実行
+Blogの作成と公開はJekyllとGithub Pagesを用いる．
+以下にその手順を記述する．
+[[https://qiita．com/daddygongon/items/9b7182db29861744fc79][jekyllのinstallとGitHub Pagesとの連携]]
+
+はじめに，Jekyllをインストールする．
+#+begin_quote
+  #+begin_example
+  gem install bundler jekyll
+  #+end_example
+#+end_quote
+
+次にローカルサーバを立ち上げる．
+#+begin_quote
+  #+begin_example
+  jekyll new my-awesome-site
+  cd my-awesome-site
+  bundle exec jekyll serve
+  #+end_example
+#+end_quote
