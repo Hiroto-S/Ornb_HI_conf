@@ -24,7 +24,8 @@
 ** ゼミナール
 卒業研究などのゼミナール(以下、ゼミ)は，フンボルト理念を基礎としている．その通説を潮木は次のようにまとめている．
 #+begin_quote
-近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。- アルカディア学報（教育学術新聞掲載コラム），No．246
+近代大学の出発点は1810年に創設されたベルリン大学である。この大学の基本構想を作ったのは、ヴィルヘルム・フォン・フンボルトであり、近代大学はこのフンボルト理念から始まった。フンボルト理念の中核は研究中心主義にある。つまり、大学は教育の場である以上に研究の場であるという考え方は、このフンボルトから始まった。これがドイツばかりでなく、世界の大学を変えた。
+\cite{Ushiogi_column}
 #+end_quote
 と． また，「大学が伝えるべきことは，
 いかにして新たな知識を発見するか，いかにして知識を進歩させるか，
@@ -42,9 +43,10 @@
 レポートや試験などは，
 新しい発見につながる途中経過を求めているにもかかわらす，
 既存の知識の暗記という結果のみを求めているという誤ったメッセージとして受け取られている可能性がある．
-実践的な課題を，project based learningや
-active learningとして取り入れる試みがなされている[溝上， 2007]が，
-かける時間の割に，成果をあげるのが難しいとされている#+latex:\cite{Bell}，#+latex:\cite{Settles}，#+latex:\cite{溝上}．
+実践的な課題を，project based learning \cite{Bell}
+やactive learningとして取り入れる試みがなされている
+\cite{Settles}，\cite{溝上}
+が，かける時間の割に，成果をあげるのが難しいとされている
 
 「研究する学生」を育てるには，個人に適合した指導が欠かせない．
 これはある意味，メンターとメンティ，あるいは
@@ -71,7 +73,7 @@ active learningとして取り入れる試みがなされている[溝上， 200
 ** 状況に埋め込まれた学習
 1991年にレイヴとウェンガーによって，
   「状況に埋め込まれた学習」あるいは「正統的周辺参加」
-  という学習形態・概念が提案された[福島真人， 1993]．
+  という学習形態・概念が提案された\cite{LaveWenger}.
   彼らは，アフリカの仕立て職人や助産婦の育成法を社会学的に詳しく調査した結果，
   徒弟制のなかに学びの本質があると指摘した．
 少し複雑ではあるが，その概念をもっとも短くまとめたと思われる箇所を以下にそのまま書き写す．
@@ -93,23 +95,20 @@ active learningとして取り入れる試みがなされている[溝上， 200
 実践者の共同体がより大きくなると，
 徒弟の形成によって共同体は自らを再生させるが，
 同時に変容もすると考えられる．
-LaveWenger[pp．8-9]
+\cite{LaveWenger}[pp.8-9]
 
 中略
 
 また新参者を親方，ボス，あるいは管理者と深く対立する関係に陥らせる，参加させるよりも非自発的に隷従させるなど，これらの条件は実践における学習の可能性を部分的に，もしくは完全に，歪めてしまうと唱えた．
- LaveWenger[p．42]
+\cite{LaveWenger}[p.42]
 #+end_quote
 と記している．
-
-# [福島真人， 1993]
-# 福島真人， ジーンレイヴ， エティエンヌウェンガー， J． Lave， and E． Wenger， 状況に埋め込まれた学習―正統的周辺参加． 産業図書， 1993．
 
 
 ** AM/PM
 1998年数学者のSfardは，Lave and Wengerの考えを受け，
 学習者，教授者，研究者の知識に対する心持ちを
-AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した．
+AM(Acquisition Metaphor)とPM(Participation Metaphor)と名付けて分類した\cite{Sfard}．
 表[[table:AM/PM]]に示した通り，
 学習に対する従来の考え方であるAMは，個人が知識を習得することを目標とし，
 「学習」とは何かを獲得することであった．
@@ -198,23 +197,19 @@ PMの実践を意図している．
 となるが，それでは伝統的な徒弟制となんら変わりはない．
 どうすれば，役に立つことに学生が気づくのか．
 
-<<<<<<< HEAD
-** それでも，西谷研に参加したいと思わすには，どうすればいい？
-=======
 * 構築システムのアイデア
 「新しい徒弟制」という視点に立って，研究室運用システムとして
 - 日々の個人活動を構成員に公開する(blogシステム)
 - ペアによる個別指導(遠隔ペアプロ)
 - 欠席者のフォロー(スタンプ集め)
 という機能提供することを当初の目標とした．
->>>>>>> 44f03be01e4ff9930222eb9299cc67ca295b9865
 
 ** blogシステム
 
 #+caption: blog作成から公開までの流れ．
 #+name: fig:myhelp_to_jekyll
-#+ATTR_LATEX: placement [!h]
-[[file:．/images/myhelp_to_jekyll．png]]
+#+ATTR_LATEX: :placement [btp]
+[[file:./images/myhelp_to_jekyll.png]]
 
 学生個人のゼミ活動はゼミ発表などであるが，
 より細かな活動を記録することが望ましい．
@@ -259,7 +254,9 @@ HTMLやLaTeXへの変換等が可能であり，
 発表資料，スライドの作成など様々な用途に対応している．
 また，コードの実行の他，テーブル表記の入力，
 図や表の表示，ライブ計算，
-機能も兼ね備えている#+latex:\cite{Org-mode}．
+機能も兼ね備えている
+\cite{Org-mode}
+．
 今回のレポートとなる文書の作成するために，org-modeを用いる．
 
 *** Jekyll = 晒すと何がいい？
@@ -269,31 +266,11 @@ JekyllはRubygemsで提供されている静的サイトジェネレーターで
 テーマや構成を変更することができ，好みのサイトを作成できる．
 Githubには，Jekyllで作成されたサイトを公開する
 GitHub Pagesというサービスが用意されている．
-
+ 
 my_helpで作成されたBlogを，Jekyllに連携することで，
 localにおいてその完成度を確認することができる．
 また，git pushするだけでgithub pagesでworld wideに公開される．
 
-
-<<<<<<< HEAD
-
-** 客観的な事実の記述
-- merit見えない， demerit時間が取られる
-- 西谷研究室では，生徒の出席率が悪い．
-  これの原因は，他人任せであることが一番大きい．
-  「誰かが出席していれば，なんとかしてくれる」，
-  「欠席による出席者より理解が遅れるという危機感の無さ」，
-  「プライベートとゼミとの優先順位がおかしい」
-  等が挙げられる．
-
-  卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
-  プログラミング，レポートの書き方を教える．
-  この時，後輩は自らの意思で参加するという考え方であるべきだ．
-  西谷研究室では，後輩が参加者となり先輩から学ぶという風潮が見受けられない．
-  後輩は，卒業研究を発表すること，
-  結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
-
-=======
 ** 遠隔ペアプロ
 ペアの活動や欠席者の遅れをフォローするシステムを提供する．
 現在，ゼミを中心とした，個別の時間調整を行っている．
@@ -313,7 +290,6 @@ Joel Spolsky 著，青木靖訳「Joel on software」(オーム社，2005)p．13
 キャンパスが郊外にあるため，効率的にゼミナールの研究を進めるためには，
 遠隔での共同作業が不可欠である．そこで，いくつかの環境を使って
 実際の作業を試行して，結果を収集する．
->>>>>>> 44f03be01e4ff9930222eb9299cc67ca295b9865
 
 そのような環境で必要となる仕様は，新しいタイプの徒弟制の視点に立って，
 1． 先輩と後輩によるペアプロ
@@ -329,10 +305,9 @@ Teletype for Atomは，ホストがKeyを発行し，そのKeyによってメン
 参加すると，メンバーのカーソルが表示され，
 リアルタイムでコードの編集やコメントを
 書く事ができる．
-また，メンバーが退出しても，ホスト側に記録が残るようになっている#+latex:\cite{Atom}．
-
+また，メンバーが退出しても，ホスト側に記録が残るようになっている\cite{Atom}．
 また，Visual Studio Live Shareも遠隔で複数人がリアルタイムに
-コード編集，ブレークポイント，デバッガ操作を共有できる環境である#+latex:\cite{VSC}．
+コード編集，ブレークポイント，デバッガ操作を共有できる環境である\cite{VSC}．
 Visual Studio Live ShareとTeletype for Atomの違いは，
 編集できるファイルの数である．
 Type for Atomは，ホストが開いた１つのファイルのみ編集が
@@ -340,20 +315,20 @@ Type for Atomは，ホストが開いた１つのファイルのみ編集が
 をリアルタイム編集可能である．
 また，Keyの発行がshareボタン一つで発行できる点や，
 ブレークポイントを設定し，コードの実行を共有できる点は
-Visual Studio Live Shareの特徴である#+latex:\cite{VSCRevie}．
+Visual Studio Live Shareの特徴である\cite{VSCRevie}．
 
 ** スタンプ集め
-
-また，構成員は教授者と学習者の両方に成り得るものとし，欠席者は
+ゼミに欠席した学生のフォローシステムである．
+構成員は教授者と学習者の両方に成り得るものとし，欠席者は
 ゼミ出席者を教授者としゼミの内容や課題を教えてもらう学習者とする．
 
-学習者は，教授者に教えてもらいながら，
+欠席学生は，出席学生に教えてもらいながら，
 課題に取り組むとともに，Blogを作成し，知識定着をはかる．
-課題達成後は教授者が学習者にスタンプを押す．
+課題達成後は指導学生が学習者にスタンプを押す．
 そのスタンプが，課題達成の証明となり，卒業するまでの必須
 過程とする．
-また，ゼミ欠席者でも教授者にスタンプを押してもらうと，
-教授者としての資格を獲得し，
+また，欠席者でも指導者にスタンプを押してもらうと，
+者としての資格を獲得し，
 他の欠席者に教える事ができ，課題達成後はスタンプを押す．
 
 ゼミ毎にスタンプを用意し，全てのスタンプの取得が卒業の必須項目とする．
@@ -375,30 +350,38 @@ Visual Studio Live Shareの特徴である#+latex:\cite{VSCRevie}．
 
 * 今後の課題
 
-* 参考文献
-- [潮木] フンボルト理念
-- [溝上慎一， 2007]
- 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（2007）
--  [Bell， 2010]
- S． Bell: ‘Project-Based Learning for the 21st Century: Skills for the Future’; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol． 83， no． 2， pp． 39–43， (2010)．
--  [Settles， 2009]
- B． Settles: ‘Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
-- [Atom]【リアルタイム共同編集】Atomで出来るようになったってよ - Qiita， https://qiita．com/k-waragai/items/a372800c262f56fe688a
-- [VSC] ［速報］「Visual Studio Live Share」発表。複数のプログラマがリアルタイムにコードの編集、ブレークポイント、デバッガ操作などを共有。Connect(); 2017， https://www．publickey1．jp/blog/17/visual_studio_live_shareconnect_2017．html
-- [VSCReview] リアルタイムでコードの共同編集ができる、Visual Studio Live Shareを使ってみた（パブリックプレビュー版），http://yfp5521．hatenablog．com/entry/vscode-liveshare
-
 \begin{thebibliography}{7}
-
+\bibitem{Ushiogi_column} 潮木守一: アルカディア学報（教育学術新聞掲載コラム），No．246.
+\bibitem{Ushiogi} 潮木守一: フンボルト理念の終焉？現代大学の新次元: 東信堂, 2008.
 \bibitem{Bell} S． Bell: ‘Project-Based Learning for the 21st Century: Skills for the Future’; The Clearing House: A Journal of Educational Strategies， Issues and Ideas， vol． 83， no． 2， pp． 39–43， (2010)．
 \bibitem{Settles} B． Settles: ‘Active Learning Literature Survey’; University of Wisconsin-Madison Department of Computer Sciences， Technical Report， (2009)．
-\bibitem{溝上} 溝上: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（2007）
-\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで， \url{https://orgmode．org/ja/} (accessed on 10 Feb 2019)．
-\bibitem{Atom} 【リアルタイム共同編集】Atomで出来るようになったってよ - Qiita; \url{https://qiita．com/k-waragai/items/a372800c262f56fe688a} (accessed on 7 July 2019)．
-\bibitem{VSC}  ［速報］「Visual Studio Live Share」発表。複数のプログラマがリアルタイムにコードの編集、ブレークポイント、デバッガ操作などを共有。Connect(); 2017; \url{https://www．publickey1．jp/blog/17/visual_studio_live_shareconnect_2017．html} (accessed on 7 July 2019)．
-\bibitem{VSCReview} リアルタイムでコードの共同編集ができる、Visual Studio Live Shareを使ってみた（パブリックプレビュー版）; \url{http://yfp5521．hatenablog．com/entry/vscode-liveshare} (accessed on 7 July 2019)．
+\bibitem{溝上} 溝上慎一: アクティブ・ラーニング導入の実践的課題; 名古屋高等教育研究，第7号，pp．269--287（2007）
+\bibitem{Org-mode} Org mode for Emacs: あなたの生活をプレーンテキストで， \url{https://orgmode.org/ja/} (accessed on 10 Feb 2019)．
+\bibitem{LaveWenger} シーン・レイフ, エティエンヌ・ウェンカー, 佐伯胖訳, 福島正人解説: '状況に埋め込まれた学習, 正統的周辺参加' : 産業図書, 1993.
+\bibitem{Sfard} A. Sfard: 'On Two Metaphors for Learning and the Dangers of Choosing Just one': Educational Researcher, 27(1998), 413.
+\bibitem{Atom} 【リアルタイム共同編集】Atomで出来るようになったってよ - Qiita; \url{https://qiita.com/k-waragai/items/a372800c262f56fe688a} (accessed on 7 July 2019)．
+\bibitem{VSC}  ［速報］「Visual Studio Live Share」発表。複数のプログラマがリアルタイムにコードの編集、ブレークポイント、デバッガ操作などを共有。Connect(); 2017; \url{https://www.publickey1.jp/blog/17/visual_studio_live_shareconnect_2017.html} (accessed on 7 July 2019)．
+\bibitem{VSCReview} リアルタイムでコードの共同編集ができる、Visual Studio Live Shareを使ってみた（パブリックプレビュー版）; \url{http://yfp5521.hatenablog.com/entry/vscode-liveshare} (accessed on 7 July 2019)．
 \end{thebibliography}
 
 * COMMENT その他
+
+** 客観的な事実の記述
+- merit見えない， demerit時間が取られる
+- 西谷研究室では，生徒の出席率が悪い．
+  これの原因は，他人任せであることが一番大きい．
+  「誰かが出席していれば，なんとかしてくれる」，
+  「欠席による出席者より理解が遅れるという危機感の無さ」，
+  「プライベートとゼミとの優先順位がおかしい」
+  等が挙げられる．
+
+  卒業研究やゼミにおいても，教授や先輩が後輩に計算機の使い方や，
+  プログラミング，レポートの書き方を教える．
+  この時，後輩は自らの意思で参加するという考え方であるべきだ．
+  西谷研究室では，後輩が参加者となり先輩から学ぶという風潮が見受けられない．
+  後輩は，卒業研究を発表すること，
+  結果のみを考えており，卒業研究を発表するまでの過程の重要性に気づいていない．
+
 ** 新しい徒弟制と古い徒弟制，西谷研でどうするよ？
 - このような参加型の学習を西谷研で実践するのに何が必要か？
 - 徒弟制の本質
