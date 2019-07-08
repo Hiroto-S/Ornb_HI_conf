@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2018.3.27)  8 JUL 2019 09:00
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.euc) (TeX Live 2017) (preloaded format=platex 2018.3.27)  8 JUL 2019 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -908,31 +908,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.82 \cite{Ushiogi_column}
+l.83 \cite{Ushiogi_column}
                           
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.100 ...題を，project based learning \cite{Bell}
+l.88 を志向したとしている\cite{Ushiogi}
+                                       ．
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \let 
+l.101 ...題を，project based learning \cite{Bell}
                                                  
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.102 \cite{Settles}
+l.103 \cite{Settles}
                     ，\cite{溝上}
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.102 \cite{Settles}，\cite{溝上}
+l.103 \cite{Settles}，\cite{溝上}
                                  
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.135 ...習形態・概念が提案された\cite{LaveWenger}
+l.136 ...習形態・概念が提案された\cite{LaveWenger}
                                                   .
 ? 
 [1
@@ -942,19 +948,25 @@ l.135 ...習形態・概念が提案された\cite{LaveWenger}
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.157 \cite{LaveWenger}
+l.158 \cite{LaveWenger}
                        [pp.8-9]
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.162 \cite{LaveWenger}
+l.163 \cite{LaveWenger}
                        [p.42]
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.171 ...n Metaphor)と名付けて分類した\cite{Sfard}
+l.172 ...n Metaphor)と名付けて分類した\cite{Sfard}
+                                                  ．
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \let 
+l.206 ...開始されている\cite{DegreeApprenticeship}
                                                   ．
 ? 
 [2]
@@ -964,93 +976,107 @@ File: ./images/myhelp_to_jekyll.png Graphic file (type bmp)
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.340 \cite{Org-mode}
+l.345 \cite{Org-mode}
                      
 ? 
 [3]
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.392 ...側に記録が残るようになっている\cite{Atom}
+l.397 ...側に記録が残るようになっている\cite{Atom}
                                                   ．
 ? 
 ! Missing number, treated as zero.
 <to be read again> 
                    \let 
-l.394 ...ッガ操作を共有できる環境である\cite{VSC}
+l.399 ...ッガ操作を共有できる環境である\cite{VSC}
                                                  ．
 ? 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <7> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 402.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 407.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <7> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 402.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 407.
 
-LaTeX Warning: Citation `VSCRevie' on page 4 undefined on input line 402.
+LaTeX Warning: Citation `VSCRevie' on page 4 undefined on input line 407.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 449.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 454.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+[]\T1/cmr/m/n/9 press re-lease: 'Gov-ern-ment rolls-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+\T1/cmr/m/n/9 out flag-ship De-gree Ap-pren-tice-ships':
+ []
+
+
+Overfull \hbox (214.02913pt too wide) in paragraph at lines 457--458
+[][][][]\T1/cmr/m/n/9 ,
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 [] \ninmin 【 リアルタイム共同編集 】 \T1/cmr/m/n/9 Atom \ninmin で
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
 \ninmin 出来るようにな っ た っ てよ \T1/cmr/m/n/9 - Qi-ita;
  []
 
 
-Overfull \hbox (53.57338pt too wide) in paragraph at lines 452--453
+Overfull \hbox (53.57338pt too wide) in paragraph at lines 458--459
 [][][][]
  []
 
 
-Overfull \hbox (152.27415pt too wide) in paragraph at lines 453--454
+Overfull \hbox (152.27415pt too wide) in paragraph at lines 459--460
 [][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 []\ninmin リアルタイムでコ ードの共同編集がで
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 \ninmin きる 、 \T1/cmr/m/n/9 Vi-sual Stu-dio Live Share \ninmin を使
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 \ninmin っ てみた （ パブリ ッ クプレビ ュ ー版 ） \T1/cmr/m/n/9 ;
  []
 
 
-Overfull \hbox (44.12569pt too wide) in paragraph at lines 454--455
+Overfull \hbox (44.12569pt too wide) in paragraph at lines 460--461
 [][][][]
  []
 
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
- [5
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 462.
+[5
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 462.
  (./thesis_final.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 456.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 462.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 462.
 Package rerunfilecheck Info: File `thesis_final.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 462.
  ) 
 Here is how much of TeX's memory you used:
- 7243 strings out of 493640
- 100349 string characters out of 6148698
- 198833 words of memory out of 5000000
- 10704 multiletter control sequences out of 15000+600000
+ 7244 strings out of 493640
+ 100371 string characters out of 6148698
+ 197833 words of memory out of 5000000
+ 10705 multiletter control sequences out of 15000+600000
  32335 words of font info for 111 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 36i,13n,39p,369b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,13n,39p,369b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis_final.dvi (5 pages, 43408 bytes).
+Output written on thesis_final.dvi (5 pages, 44900 bytes).

@@ -48,7 +48,6 @@ task :platex do
   end
 
   commands = ["platex #{t_file}.tex",
-              "bibtex #{t_file}.tex",
               "platex #{t_file}.tex",
               "dvipdfmx #{t_file}.dvi",
               "open #{t_file}.pdf"]
