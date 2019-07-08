@@ -18,7 +18,8 @@ $head1 = <<'EOS'
 }
 
 %英文タイトル
-\etitle{hoge hoge}
+\etitle{ Learning Process by Knowledge Construction System 'ornb' }
+% PM makes new seminar system
 
 %著者英文名
 \eauthor{
@@ -32,7 +33,7 @@ $head2 = <<'EOS'
 \end{abstract}
 
 \begin{keyword}
-keyword 1, keyword 2, keyword 3, keyword 4, keyword 5
+learning support, educational system, problem finding
 \end{keyword}
 
 \maketitle
