@@ -51,7 +51,9 @@ task :platex do
   commands = ["platex #{t_file}.tex",
               "platex #{t_file}.tex",
               "dvipdfmx #{t_file}.dvi",
-              "open #{t_file}.pdf"]
+              "open #{t_file}.pdf",
+              "cp thesis_final.pdf hi_shinsei_928.pdf"
+             ]
   commands.each{|com| system com}
 end
 

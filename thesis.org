@@ -249,7 +249,7 @@ programming skillの向上が期待される．
 blogの作成から公開までの流れは図[[fig:myhelp_to_jekyll]]のようになる．
 
 *** my_help = 直交補空間
-my_helpはRubygemsで提供されている. 
+my_helpはRubygemsで提供されている.
 知識の量が増えると，それを書き留めたメモやレポートが増え，
 ファイル構造にchunkingの必要が出てくる．
 ところが，chunkingすることにより，ディレクトリ構造が深くなる．
@@ -279,7 +279,7 @@ JekyllはRubygemsで提供されている静的サイトジェネレーターで
 テーマや構成を変更することができ，好みのサイトを作成できる．
 GitHubには，Jekyllで作成されたサイトを公開する
 GitHub Pagesというサービスが用意されている．
- 
+
 my_helpで作成されたblogを，Jekyllに連携することで，
 localにおいてそのプレビューを確認することができる．
 また，git pushするだけでGithub Pagesでworld wideに公開される．
